@@ -1,0 +1,27 @@
+.header_container {
+    transform: translateY(1rem);
+}
+.home_logo {
+    transform: translateY(0.3rem);
+}
+.home_logo img{
+    width: 6rem;
+}
+
+.seaech_home {
+    transform: translateY(1rem);
+}
+.tabs_home {
+    transform: translate(3rem, 0.7rem);
+}
+.search_icon {
+    background: url("../img/search.png") no-repeat center center;
+    background-size: contain;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    transform: translate(0.5rem, -2.1rem);
+}
+#my-nav li.nav-item {
+   background:#EBEBEB;
+}

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>主页__food</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/base.css">
     <!-- 引入bootstap和jquery和echarts cdn-->
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -19,5 +20,52 @@
      <script src="js/echarts.min.js"></script> -->
   </head>
   <body>
+    <!-- 头部 -->
+    <header class="container header_container">
+      <div class="row justify-content-center align-content-center">
+        <!-- logo -->
+        <div class="col-2 home_logo">
+          <img src="./img/logo/logo.png" alt="">
+        </div>
+        <!-- 搜索框 -->
+        <div class="col-3 seaech_home">
+          <input type="text" class="form-control"/>
+          <span class="search_icon"></span>
+        </div>
+        <!-- 选项卡 -->
+        <div class="col-7 tabs_home">
+          <ul class="nav nav-tabs" id="my-nav">
+            <li class="nav-item"><a data-target="#menu-home" class="nav-link active" data-toggle="tab">首页</a></li>
+            <li class="nav-item"><a data-target="#menu-map" class="nav-link" data-toggle="tab">地图</a></li>
+            <li class="nav-item"><a data-target="#menu-store" class="nav-link" data-toggle="tab">店铺</a></li>
+            <li class="nav-item"><a data-target="#menu-food" class="nav-link" data-toggle="tab">食谱</a></li>
+            <li class="nav-item"><a data-target="#menu-find" class="nav-link" data-toggle="tab">发现</a></li>
+            <li class="nav-item"><a data-target="#menu-person" class="nav-link" data-toggle="tab">个人中心</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- 主体 -->
+    <section class="container">
+      <!-- 导航选型卡对应的内容 -->
+      <div class="tab-content">
+        <!-- 主页 -->
+        <div class="tab-pane active" id="menu-index">home:</div>
+        <!-- 地图 -->
+        <div class="tab-pane" id="menu-map">map:</div>
+        <!-- 商店 -->
+        <div class="tab-pane" id="menu-store">store:</div>
+        <!-- 食谱 -->
+        <div class="tab-pane" id="menu-food">food:</div>
+        <!-- 发现 -->
+        <div class="tab-pane" id="menu-find">find:</div>
+        <!-- 个人中心 -->
+        <div class="tab-pane" id="menu-person">person:</div>
+      </div>
+    </section>
+    <!-- 尾部 -->
+    <footer></footer>
+    <script>
+    </script>
   </body>
 </html>
