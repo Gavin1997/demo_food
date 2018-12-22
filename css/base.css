@@ -1,9 +1,4 @@
-.header_container {
-    transform: translateY(1rem);
-}
-.home_logo {
-    transform: translateY(0.3rem);
-}
+
 .home_logo img{
     width: 6rem;
 }
@@ -12,7 +7,8 @@
     transform: translateY(1rem);
 }
 .tabs_home {
-    transform: translate(3rem, 0.7rem);
+    transform: translate(5rem, 0.7rem);
+    cursor: pointer;
 }
 .search_icon {
     background: url("../img/search.png") no-repeat center center;
@@ -23,5 +19,71 @@
     transform: translate(0.5rem, -2.1rem);
 }
 #my-nav li.nav-item {
-   background:#EBEBEB;
+   background:#DCDCDC;
+   border-right:1px solid #eee;
+}
+/* 轮播图 */
+#carousel_imgs {
+    box-shadow: 0px 0px 15px 0px #666;
+}
+
+/* 背景颜色图 */
+.background_index {
+    background: #FEE4C3;
+    height:100%;
+    width:500px;
+    z-index: -10;
+    position: absolute;
+    right:0px;
+    top:0;
+}
+/* 地图颜色图 */
+.background_map {
+    background: #D3EFFA;
+    height:100%;
+    width:500px;
+    z-index: -10;
+    position: absolute;
+    right:0px;
+    top:0;
+}
+/* 商店颜色图 */
+.background_shop {
+    background: #E3E1F7;
+    height:100%;
+    width:500px;
+    z-index: -10;
+    position: absolute;
+    right:0px;
+    top:0;
+}
+/* 食谱颜色图 */
+.background_food {
+    background: #d9f9cc;
+    height:100%;
+    width:500px;
+    z-index: -10;
+    position: absolute;
+    right:0px;
+    top:0;
+}
+/* 发现颜色图 */
+.background_find {
+    background: #ffbbbb;
+    height:100%;
+    width:500px;
+    z-index: -10;
+    position: absolute;
+    right:0px;
+    top:0;
+}
+/* 个人中心 */
+.background_person {
+    background: #94fff4;
+    height:100%;
+    width:500px;
+    z-index: -10;
+    position: absolute;
+    right:0px;
+    top:0;
 }
