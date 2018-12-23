@@ -86,4 +86,179 @@
     position: absolute;
     right:0px;
     top:0;
+   
+}
+/* 鼠标hover 下拉菜单 */
+.my_dropdown_food li:hover{
+    background: #666 !important;
+}
+.food_menu li{
+    cursor: pointer;
+    padding:5px 10px;
+    border:1px solid transparent;
+}
+.food_menu_active {
+    border:1px solid red;
+    background: red;
+    color:#fff;
+}
+/* 食谱图片 */
+.food_details .food_box img{
+    width:250px;
+}
+.food_details .food_box {
+    width:280px;
+    box-shadow: 0px 0px 15px 0px #666;
+    position: relative;
+    cursor: pointer;
+}
+.person_box img{
+    width:250px;
+}
+.person_box {
+    width:280px;
+    box-shadow: 0px 0px 15px 0px #666;
+    position: relative;
+    cursor: pointer;
+}
+.person_box:hover .hide_info{
+    display: block;
+}
+.food_details .food_box:hover .hide_info{
+    display: block;
+}
+.hide_info{
+    text-align: center;
+    vertical-align: center;
+    position: absolute;
+    line-height: 20px;
+    top:8%;
+    left:15%;
+    width:200px;
+    height:150px;
+    background: rgba(254, 228, 195,0.6);
+    display: none;
+    text-overflow: ellipsis;
+    overflow:auto;
+    word-wrap: break-word;
+    font-size:14px;
+}
+.food_intro_img{
+    height:300px;
+    background: url("../img/img/img14.jpeg") no-repeat;
+    background-size:100% ; 
+}
+.my_rounded{
+    border-radius: 1rem !important;
+}
+/* 竖分割线 */
+.cur-off{
+    height:100%;
+    width:2px;
+    background: #9AB9B0;
+    display: inline-block;
+}
+.recommend_wrap{
+    margin:8rem !important;
+}
+/* 商店 */
+.shop-line {
+    width: 1120px;
+    margin: auto;
+    overflow: hidden;
+
+}
+.store_intro_img{
+    height:300px;
+    background: url("../img/img/img16.jpeg") no-repeat 100% 100%;
+    background-size:100% ; 
+}
+.shop-box {
+    width: 280px;
+    height: 340px;
+    background: white;
+    margin-right: 46px;
+    margin-left: 46px;
+    margin-bottom: 50px;
+    float: left;
+    box-shadow: #cccccc 0px 0px 10px 5px;
+    position: relative;
+}
+
+.shop-box:hover .shop-collect {
+    display: block;
+}
+.shop-box:hover{
+   transform: translateY(-20px);
+   transition: 0.1s linear; 
+}
+.shop-box img {
+    width: 100%;
+    height: 55%;
+}
+
+button {
+    background: #269e5c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.shop-text {
+    width: 100%;
+    padding-left: 10px;
+}
+
+.shop-collect {
+    width: 100%;
+    height: 55%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.548);
+    display: none;
+}
+
+.shop-collect img{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    left: calc(50% - 40px);
+    top: calc(50% - 40px);
+    cursor: pointer;
+}
+/* 个人 */
+
+.hr_line{
+    width:100%;
+    height:2px;
+    background: #5fdbd1;
+}
+
+.avator{
+    width:100px;
+    height:100px;
+    overflow: hidden;
+    border-radius: 50%;
+    position: absolute;
+    left:40%;
+    top:-50px;
+    background:  url("../img/logo/avator.jpeg") no-repeat;
+}
+.avator_info{
+    position: absolute;
+    left:40%;
+    top:50px;
+}
+.avator_set{
+    background: url("../img/logo/avator_set.svg") no-repeat;
+    background-size:contain;
+    width:300px;
+    height:300px;
+}
+.my_dropdown_person li:hover{
+    background:#ddd !important;
+    cursor: pointer;
 }

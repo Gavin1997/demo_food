@@ -10,8 +10,8 @@
   <!-- 引入bootstap和jquery和echarts cdn-->
   <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
-  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+  <script src=" https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
   <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
@@ -27,13 +27,16 @@
   <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
   <!-- 本地引入 -->
   <!-- <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/certify.css">
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/popper.min.js"></script>
-  <script src="js/echarts.min.js"></script> -->
+  <script src="js/echarts.min.js"></script>
+  <script type="text/javascript" src="js/swiper.min.js"></script> -->
 </head>
 
-<body> 
+<body>
   <!-- 头部 -->
   <header class="container header_container mt-3">
     <div class="row justify-content-center align-content-center">
@@ -52,7 +55,15 @@
           <li class="nav-item"><a data-target="#menu-home" class="nav-link active" data-toggle="tab">首页</a></li>
           <li class="nav-item"><a data-target="#menu-map" class="nav-link " data-toggle="tab">地图</a></li>
           <li class="nav-item"><a data-target="#menu-store" class="nav-link" data-toggle="tab">店铺</a></li>
-          <li class="nav-item"><a data-target="#menu-food" class="nav-link" data-toggle="tab">食谱</a></li>
+          <li class="nav-item position-relative">
+            <a id="dropdown_food" data-target="#menu-food" class="nav-link dropdown-toggle" data-toggle="tab">食谱
+            </a>
+            <ul class="list-unstyled text-center position-absolute border w-100 my_dropdown_food d-none" style="font-size:14px;">
+              <li class="bg-white border-bottom p-1" data-toggle="menu_food" data-target="#menu_food_breakfast">早餐夜宵</li>
+              <li class="bg-white  border-bottom p-1" data-toggle="menu_food" data-target="#menu_food_sample">简餐便当</li>
+              <li class="bg-white border-bottom p-1" data-toggle="menu_food" data-target="#menu_food_home">家常菜</li>
+            </ul>
+          </li>
           <li class="nav-item"><a data-target="#menu-find" class="nav-link" data-toggle="tab">发现</a></li>
           <li class="nav-item"><a data-target="#menu-person" class="nav-link" data-toggle="tab">个人中心</a></li>
         </ul>
@@ -65,7 +76,7 @@
     <div class="container">
       <div class="tab-content">
         <!-- 主页 -->
-        <div class="tab-pane active" id="menu-home">
+        <div class="tab-pane active animated headShake " id="menu-home">
           <!-- 轮播图 -->
           <div id="carousel_imgs" class="carousel" data-ride="carousel">
             <!-- 导航指示器 -->
@@ -111,33 +122,663 @@
         </div>
         <!-- 地图 -->
         <div class="tab-pane " id="menu-map">
-            <div id="container" style="height: 1000px ;width:1120px;"></div>
-            <div class="background_map"></div>
+          <div id="container" style="height: 1000px ;width:1120px;"></div>
+          <div class="background_map"></div>
         </div>
-        <!-- 商店 -->
-        <div class="tab-pane" id="menu-store">store:
+        <!-- 店铺 -->
+        <div class="tab-pane  animated fadeInUp" id="menu-store">
+          <div class="shop-line">
+            <div class="shop-box">
+              <img src="img/img/img11.jpeg" alt="">
+              <div class="shop-text">
+                <h4> 小龙坎老火锅</h4>
+                <p>地址:成都市东大街36号</p>
+                <button class="btn btn-success enter">点击进入</button>
+              </div>
+              <div class="shop-collect">
+                <img class="show" src="img/img/collect1.png" alt="">
+              </div>
+            </div>
+            <div class="shop-box">
+              <img src="img/img/img9.jpeg" alt="">
+              <div class="shop-text">
+                <h4> 红杏酒家</h4>
+                <p>地址:成都市金牛区一品天下</p>
+                <button class="btn btn-success enter">点击进入</button>
+              </div>
+              <div class="shop-collect">
+                <img class="show" src="img/img/collect1.png" alt="">
+              </div>
+            </div>
+            <div class="shop-box">
+              <img src="img/img/img8.jpeg" alt="">
+              <div class="shop-text">
+                <h4> 汉堡王</h4>
+                <p>地址:成都市锦江区九眼桥附近</p>
+                <button class="btn btn-success enter">点击进入</button>
+              </div>
+              <div class="shop-collect">
+                <img class="show" src="img/img/collect1.png" alt="">
+              </div>
+            </div>
+            <div class="shop-box">
+              <img src="img/img/img12.jpeg" alt="">
+              <div class="shop-text">
+                <h4> 相对论</h4>
+                <p>地址:成都市高新区府城大道88号</p>
+                <button class="btn btn-success enter">点击进入</button>
+              </div>
+              <div class="shop-collect">
+                <img class="show" src="img/img/collect1.png" alt="">
+              </div>
+            </div>
+            <div class="shop-box">
+              <img src="img/img/img10.jpeg" alt="">
+              <div class="shop-text">
+                <h4>宫廷糕点</h4>
+                <p>地址:成都市青羊区酱园公所街56号</p>
+                <button class="btn btn-success enter">点击进入</button>
+              </div>
+              <div class="shop-collect">
+                <img class="show" src="img/img/collect1.png" alt="">
+              </div>
+            </div>
+            <div class="shop-box">
+              <img src="img/img/img7.jpeg" alt="">
+              <div class="shop-text">
+                <h4> 曼哈顿</h4>
+                <p>地址:成都市武侯区人民南路49号</p>
+                <button class="btn btn-success enter">点击进入</button>
+              </div>
+              <div class="shop-collect">
+                <img class="show" src="img/img/collect1.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="food_intro animated" id="food_intro">
+            <div class="row">
+              <div class="col-12 border p-5">
+                <div class="store_intro_img"></div>
+                <div class="text-center mt-3">
+                  <p>ID:1123456789</p>
+                  <p>营业时间</p>
+                  <p>早上10:00-晚上10:00</p>
+                  <p class="mt-4">RMB 75/人</p>
+                  <hr>
+                  <p class=""><span><img src="img/logo/position.png" alt=""></span>成都市锦江区红星路</p>
+                  <p><span><img src="img/logo/phone.png" alt=""></span>02612013213212344</p>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="background_shop"></div>
         </div>
         <!-- 食谱 -->
-        <div class="tab-pane" id="menu-food">food:
-          <div class="background_food"></div>
+        <div class="tab-pane " id="menu-food">
+          <div id="menu_food_breakfast">
+            <!-- 菜式选择 -->
+            <div class="food_container p-4 mt-5 animated fadeInLeft">
+              <div class="border-dark border p-5">
+                <!-- 菜式 -->
+                <div class="row mt-3">
+                  <div class="col-3 text-center"><button class=" text-left btn w-100 bg-white border-info text-dark">菜式</button></div>
+                  <div class="col-8">
+                    <ul class="list-unstyled d-flex justify-content-around food_menu">
+                      <li data-toggle="menu">川菜</li>
+                      <li data-toggle="menu">湘菜</li>
+                      <li data-toggle="menu">粤菜</li>
+                      <li data-toggle="menu">东北菜</li>
+                      <li data-toggle="menu">鲁菜</li>
+                      <li data-toggle="menu">台湾菜</li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- 食材 -->
+                <div class="row mt-3">
+                  <div class="col-3 text-center"><button class=" text-dark text-left btn w-100 bg-white border-success">食材</button></div>
+                  <div class="col-8">
+                    <ul class="list-unstyled d-flex justify-content-around food_menu">
+                      <li data-toggle="menu">小葱</li>
+                      <li data-toggle="menu">大白菜</li>
+                      <li data-toggle="menu">香料</li>
+                      <li data-toggle="menu">笨鸡</li>
+                      <li data-toggle="menu">老鸭</li>
+                      <li data-toggle="menu">草鱼</li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- 所需时间 -->
+                <div class="row mt-3">
+                  <div class="col-3 text-center"><button class=" text-dark text-left btn w-100 bg-white border-danger">所需时间</button></div>
+                  <div class="col-8">
+                    <ul class="list-unstyled d-flex justify-content-around food_menu">
+                      <li data-toggle="menu">10分钟以下</li>
+                      <li data-toggle="menu">10-30分钟</li>
+                      <li data-toggle="menu">30分钟以上</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 食谱具体展示 -->
+            <div class="food_details p-5 animated fadeInUp">
+              <div class="row">
+                <div class="col-4">
+                  <div class="food_box border text-center p-3 pl-0">
+                    <img src="img/carousel/img4.jpeg" />
+                    <div class="mt-2">汉堡</div>
+                    <div class="hide_info animated rotateIn">Hamburger
+                      除了表示“汉堡包”，还有“碎牛肉，牛肉饼”的意思，可见汉堡包里的肉多半是牛肉做的。不过后来“猪柳”、“鱼香”、“鸡肉”等类型的汉堡包又陆续推出，可见光靠牛肉是没法“一招鲜吃遍天”了。</div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="food_box border text-center  p-3">
+                    <img src="img/carousel/img5.jpeg" />
+                    <div class="mt-2">咖喱</div>
+                    <div class="hide_info animated rotateIn">咖喱（也写作咖哩）是由多种香料调配而成的酱料，常见于印度菜、泰国菜和日本菜等东南亚地区菜系，一般伴随肉类和饭一起吃。。</div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="food_box border text-center  p-3">
+                    <img src="img/carousel/img6.jpeg" />
+                    <div class="mt-2">咖啡</div>
+                    <div class="hide_info animated rotateIn">“咖啡”一词源自希腊语“Kaweh”，意思是“力量与热情”。在世界各地，人们越来越爱喝咖啡。随之而来的“咖啡文化”充满生活的每个时刻。无论在家里、还是在办公室、或是各种社交场合，人们都在品着咖啡、它逐渐与时尚、现代生活联系在一起。</div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-5">
+                <div class="col-4">
+                  <div class="food_box border text-center p-3 pl-0">
+                    <img src="img/img/img7.jpeg" />
+                    <div class="mt-2">炒饭</div>
+                    <div class="hide_info animated rotateIn">炒饭是常见的一种食物，一般分为多种品类，如：扬州炒饭、香肠炒饭、西红柿炒饭、咖喱炒饭、培根炒饭等。很受大众追捧，在各个地方也特色化。主要材料是用煮好的米饭、一些菜肴、鸡蛋爆炒而成。一般大众把炒饭当做早饭或者是晚饭，因为炒饭制作方便，耗时较少</div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="food_box border text-center  p-3">
+                    <img src="img/img/img8.jpeg" />
+                    <div class="mt-2">薯条</div>
+                    <div class="hide_info animated rotateIn">薯条（英文名French
+                      fries）是一种以马铃薯为原料，源起于比利时，切成条状后油炸而成的食品，是现在最常见的快餐食品之一，流行于世界各地。</div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="food_box border text-center  p-3">
+                    <img src="img/img/img9.jpeg" />
+                    <div class="mt-2">下午时光</div>
+                    <div class="hide_info animated rotateIn">我想，我们的人生就是这样的，谁与谁相逢，未必再有下一次，但这一次却足够温暖我们整整一个下午的时光。</div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-5">
+                <div class="col-4">
+                  <div class="food_box border text-center p-3 pl-0">
+                    <img src="img/img/img10.jpeg" />
+                    <div class="mt-2">蛋糕</div>
+                    <div class="hide_info animated rotateIn">蛋糕是一种古老的西点，一般是由烤箱制作的，蛋糕是用鸡蛋、白糖、小麦粉为主要原料。以牛奶、果汁、奶粉、香粉、色拉油、水，起酥油、泡打粉为辅料。经过搅拌、调制、烘烤后制成一种像海绵的点心。</div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="food_box border text-center  p-3">
+                    <img src="img/img/img11.jpeg" />
+                    <div class="mt-2">约会</div>
+                    <div class="hide_info animated rotateIn">约会（大多数时候被称为拍拖），是预约会面的一种，原指预先约定时间地点会面的活动。约定会面。包含了朋友同事之间或者恋爱的约定的会面，在粤语当中不仅可以称为拍拖，也可称为去街、行街（这些词都有男女约会的意思）。</div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="food_box border text-center  p-3">
+                    <img src="img/img/img12.jpeg" />
+                    <div class="mt-2">火锅</div>
+                    <div class="hide_info animated rotateIn">火锅(英语：Hot Pot [1]
+                      )，古称“古董羹”，因食物投入沸水时发出的“咕咚”声而得名，它是中国独创的美食，历史悠久，是一种老少皆宜的食物。</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 食谱三级页面 食谱详情 -->
+            <div class="food_intro" id="food_intro">
+              <div class="row">
+                <div class="col-12 border p-5">
+                  <div class="food_intro_img"></div>
+                  <div class="text-center mt-3">
+                    <p>材料:</p>
+                    <p>苹果,草莓</p>
+                    <p>菠萝,葡萄</p>
+                    <p>蓝莓,西瓜</p>
+                    <hr>
+                    <p>做法:</p>
+                    <p>首先，先将水果洗净，再切成块状（也可以削皮）</p>
+                    <p>然后，将切好的水果放入碗里。</p>
+                    <p>最后，可将搅拌好的水果沙拉放入冰箱，直到冷却即可食用。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 简单 -->
+          <div id="menu_food_sample" class="d-none">
+            <div class="row mt-5">
+              <!-- 今日推荐 -->
+              <div class="col-6">
+                <div class="row">
+                  <div class="col-6"><button class="btn btn-danger my_rounded w-100">今日推荐</button></div>
+                  <div class="col-6 mt-1"><span>2178984</span><img class="ml-2" src="./img/logo/collect.png" alt=""
+                      width="25"></div>
+                  <div class="row  m-4">
+                    <div class="col-12">
+                      <img class="w-100" src="./img/img/img15.jpeg" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 d-flex">
+                <span class="cur-off"></span>
+                <div class="recommend_wrap ">
+                  <h5 class="animated fadeInRight">让人垂涎的好菜.</h5>
+                  <h6 class="animated fadeInLeft mt-4 text-info">世间最满足的感觉莫过于将大块的蛋白质和软糯的淀粉一道送入口中，
+                    慢慢咀嚼，
+                    唇齿间渗透出丝丝甘甜和油脂醇香，
+                    那种对于卡路里和胆固醇肆无忌惮的占有，
+                    简直满足了人类植根于基因里对食物一切美好的想象!</h6>
+                  <p class="animated fadeInRightBig mt-4">我爱食物，食物爱脂肪，脂肪爱我。</p>
+                  <div class="btn-group mt-5">
+                    <button class="btn btn-info">超低卡!</button>
+                    <button class="btn btn-success">超省时!</button>
+                    <button class="btn btn-warning">颜值高!</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 家常菜 -->
+          <div id="menu_food_home" class="d-none mt-5">
+            <div class="food_details p-5 animated fadeInUp">
+              <div class="row">
+                <div class="col-4">
+                  <div class="food_box border text-center p-3 pl-0">
+                    <img src="img/home_food/1.jpg" />
+                    <div class="mt-2">面条</div>
+                    <div class="hide_info animated rotateIn">面条起源于中国，已有四千多年的制作食用历史。面条是一种制作简单，食用方便，营养丰富，即可主食又可快餐的健康保健食品，早已为世界人民所接受与喜爱。</div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="food_box border text-center  p-3">
+                    <img src="img/home_food/2.jpg" />
+                    <div class="mt-2">小炒菜</div>
+                    <div class="hide_info animated rotateIn">炒菜，中国菜的常用制作方法，将一种或几种菜在特制的凹型锅内，以火传导到铁锅中的热度为载体，加入油、佐料和菜品后用特制工具“锅铲”翻动将菜炒熟的烹饪过程。</div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="food_box border text-center  p-3">
+                    <img src="img/home_food/3.jpg" />
+                    <div class="mt-2">分享</div>
+                    <div class="hide_info animated rotateIn">分享是一个汉语词汇，读音为fēn
+                      xiǎng，是指与他人分着享受、使用、行使。语出清黄六鸿《福惠全书·杂课·牙税》：“与该房分享其利。”</div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-5">
+                <div class="col-4">
+                  <div class="food_box border text-center p-3 pl-0">
+                    <img src="img/home_food/4.png" />
+                    <div class="mt-2">饭后水果</div>
+                    <div class="hide_info animated rotateIn">水果，是指多汁且主要味觉为甜味和酸味，可食用的植物果实。水果不但含有丰富的营养，而且能够促进消化。</div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="food_box border text-center  p-3">
+                    <img src="img/home_food/5.jpeg" />
+                    <div class="mt-2">甜甜圈</div>
+                    <div class="hide_info animated rotateIn">甜甜圈，又称多拿滋、唐纳滋，它是一种用面粉、白砂糖、奶油和鸡蛋混合之后再经过油炸的甜食。甜甜圈最普遍的两种形状是中空的环状、或面团中间有包入奶油、蛋浆（泛指蛋打成的液体）等甜馅料的封闭型甜甜圈。</div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="food_box border text-center  p-3">
+                    <img src="img/home_food/6.jpeg" />
+                    <div class="mt-2">披萨</div>
+                    <div class="hide_info animated rotateIn">比萨（Pizza），又称为比萨饼、匹萨、批萨、披萨，是一种发源于意大利的食品，在全球颇受欢迎。比萨饼的通常做法是用发酵的圆面饼上面覆盖番茄酱，奶酪以及其他配料，并由烤炉烤制而成。</div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-5">
+                <div class="col-4">
+                  <div class="food_box border text-center p-3 pl-0">
+                    <img src="img/home_food/7.jpeg" />
+                    <div class="mt-2">面包</div>
+                    <div class="hide_info animated rotateIn">面包也写作麺包，一种用五谷（一般是麦类）磨粉制作并加热而制成的食品。以小麦粉为主要原料，以酵母、鸡蛋、油脂、糖、盐等为辅料，加水调制成面团，经过分割、成形、醒发、焙烤、冷却等过程加工而成的焙烤食品</div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="food_box border text-center  p-3">
+                    <img src="img/img/img8.jpeg" />
+                    <div class="mt-2">烤肉</div>
+                    <div class="hide_info animated rotateIn">烤肉（barbecues），是一道菜品，制作原料有猪肉、牛肉、蔬菜、海鲜等。独具风味，历史悠久，有浓郁的香味和鲜美的味道，可大大提高食欲。值得一提的是，现代烤肉与刀耕火种时的烤肉并不相同。据《汉代画象全集》可知，早在两汉时期就有体系完备的烤肉烤食讲究
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="food_box border text-center  p-3">
+                    <img src="img/img/img9.jpeg" />
+                    <div class="mt-2">团聚</div>
+                    <div class="hide_info animated rotateIn">幸福和谐。</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="background_food"></p>
         </div>
         <!-- 发现 -->
-        <div class="tab-pane" id="menu-find">find:
+        <div class="tab-pane" id="menu-find">
+          <div class="mt-5" style="transform: translateX(-100px)">
+            <iframe src="./find.html" frameborder="0" width="1260" height="600px"></iframe>
+          </div>
           <div class="background_find"></div>
         </div>
         <!-- 个人中心 -->
-        <div class="tab-pane" id="menu-person">person:
-          <div class="background_person"></div>
+        <div class="tab-pane" id="menu-person">
+          <div class="row">
+            <div class="col-12 mb-3">
+              <div class="hr_line" style="margin-top:6rem;position:relative;">
+                <div class="avator"></div>
+                <div class="avator_info">蔡澜的个人主页</div>
+              </div>
+            </div>
+          </div>
+          <div class="row" style="margin-top:6rem;">
+            <div class="col-12">
+              <ul class="nav nav-tabs" id="my-nav">
+                <li class="nav-item w-25"><a data-target="#person_set" class="nav-link btn btn-warning active"
+                    data-toggle="tab">个人设置</a></li>
+                <li class="nav-item w-25"><a data-target="#person_some" class="nav-link btn btn-danger" data-toggle="tab">作品</a></li>
+                <li class="nav-item w-25 position-relative">
+                  <a id="dropdown_person" data-target="#person_collect" class="nav-link dropdown-toggle btn btn-info"
+                    data-toggle="tab">收藏
+                  </a>
+                  <ul class="list-unstyled text-center position-absolute border w-100 my_dropdown_person d-none" style="font-size:14px;z-index: 99">
+                    <li class="bg-white border-bottom p-1" data-toggle="person_menu" data-target="#store">店铺</li>
+                    <li class="bg-white  border-bottom p-1" data-toggle="person_menu" data-target="#food">食谱</li>
+                  </ul>
+                </li>
+            </div>
+            <!-- 选项卡对应的内容 -->
+            <div class="col-12">
+              <div class="tab-content">
+                <div class="tab-pane animated fadeInLeft active text-center" id="person_set">
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="avator_set mt-3"></div>
+                      <p>上传你的个人头像</p>
+                    </div>
+                    <div class="col-6" style="margin-top:8rem;">
+                      <div class="d-flex align-content-center justify-content-center">
+                        <input type="text" placeholder="输入你的名字" class="form-control w-75" /><span class="text-danger d-inline-block mt-1 ml-2">
+                          &nbsp;&nbsp; * &nbsp;必填</span>
+                      </div>
+                      <div class="d-flex align-content-center justify-content-center mt-3">
+                        <input type="date" class="form-control w-75" /><span class=" d-inline-block mt-1 2">
+                          生日 选填</span>
+                      </div>
+                      <button class="btn mt-5 mr-3">修改密码</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="person_some">
+                  <div id="menu_food_home" class=" mt-5">
+                    <div class="food_details p-5 animated fadeInUp">
+                      <div class="row">
+                        <div class="col-4">
+                          <div class="person_box border text-center p-3 pl-0">
+                            <img src="img/home_food/1.jpg" />
+                            <div class="mt-2">面条</div>
+                            <div class="hide_info animated rotateIn" style="font-size:16px;line-height:16px;">是否删除?<br>
+                              <div class="btn-group mt-3"><button class="btn btn-danger yes">是</button><button class="no ml-1">否</button></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="person_box border text-center  p-3">
+                            <img src="img/home_food/2.jpg" />
+                            <div class="mt-2">小炒菜</div>
+                            <div class="hide_info animated rotateIn" style="font-size:16px;line-height:16px;">是否删除?<br>
+                              <div class="btn-group mt-3"><button class="btn btn-danger yes">是</button><button class="no ml-1">否</button></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="person_box border text-center  p-3">
+                            <img src="img/home_food/3.jpg" />
+                            <div class="mt-2">分享</div>
+                            <div class="hide_info animated rotateIn" style="font-size:16px;line-height:16px;">是否删除?<br>
+                              <div class="btn-group mt-3"><button class="btn btn-danger yes">是</button><button class="no ml-1">否</button></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mt-5">
+                        <div class="col-4">
+                          <div class="person_box border text-center p-3 pl-0">
+                            <img src="img/home_food/4.png" />
+                            <div class="mt-2">饭后水果</div>
+                            <div class="hide_info animated rotateIn" style="font-size:16px;line-height:16px;">是否删除?<br>
+                              <div class="btn-group mt-3"><button class="btn btn-danger yes">是</button><button class="no ml-1">否</button></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="person_box border text-center  p-3">
+                            <img src="img/home_food/5.jpeg" />
+                            <div class="mt-2">甜甜圈</div>
+                            <div class="hide_info animated rotateIn" style="font-size:16px;line-height:16px;">是否删除?<br>
+                              <div class="btn-group mt-3"><button class="btn btn-danger yes">是</button><button class="no ml-1">否</button></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="person_box border text-center  p-3">
+                            <img src="img/home_food/6.jpeg" />
+                            <div class="mt-2">披萨</div>
+                            <div class="hide_info animated rotateIn" style="font-size:16px;line-height:16px;">是否删除?<br>
+                              <div class="btn-group mt-3"><button class="btn btn-danger yes">是</button><button class="no ml-1">否</button></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mt-5">
+                        <div class="col-4">
+                          <div class="person_box border text-center p-3 pl-0">
+                            <img src="img/home_food/7.jpeg" />
+                            <div class="mt-2">面包</div>
+                            <div class="hide_info animated rotateIn" style="font-size:16px;line-height:16px;">是否删除?<br>
+                              <div class="btn-group mt-3"><button class="btn btn-danger yes">是</button><button class="no ml-1">否</button></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="person_box border text-center  p-3">
+                            <img src="img/img/img8.jpeg" />
+                            <div class="mt-2">烤肉</div>
+                            <div class="hide_info animated rotateIn" style="font-size:16px;line-height:16px;">是否删除?<br>
+                              <div class="btn-group mt-3"><button class="btn btn-danger yes">是</button><button class="no ml-1">否</button></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="person_box border text-center  p-3">
+                            <img src="img/img/img9.jpeg" />
+                            <div class="mt-2">团聚</div>
+                            <div class="hide_info animated rotateIn" style="font-size:16px;line-height:16px;">是否删除?<br>
+                              <div class="btn-group mt-3"><button class="btn btn-danger yes">是</button><button class="no ml-1">否</button></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="person_collect">
+                  <div class="animated fadeInLeft"  id="store" style="margin-top:6rem;">
+                    <div class="shop-line">
+                      <div class="shop-box">
+                        <img src="img/img/img11.jpeg" alt="">
+                        <div class="shop-text">
+                          <h4> 小龙坎老火锅</h4>
+                          <p>地址:成都市东大街36号</p>
+                          <button class="btn btn-success enter">点击进入</button>
+                        </div>
+                        <div class="shop-collect">
+                          <img class="show" src="img/img/collect1.png" alt="">
+                        </div>
+                      </div>
+                      <div class="shop-box">
+                        <img src="img/img/img9.jpeg" alt="">
+                        <div class="shop-text">
+                          <h4> 红杏酒家</h4>
+                          <p>地址:成都市金牛区一品天下</p>
+                          <button class="btn btn-success enter">点击进入</button>
+                        </div>
+                        <div class="shop-collect">
+                          <img class="show" src="img/img/collect1.png" alt="">
+                        </div>
+                      </div>
+                      <div class="shop-box">
+                        <img src="img/img/img8.jpeg" alt="">
+                        <div class="shop-text">
+                          <h4> 汉堡王</h4>
+                          <p>地址:成都市锦江区九眼桥附近</p>
+                          <button class="btn btn-success enter">点击进入</button>
+                        </div>
+                        <div class="shop-collect">
+                          <img class="show" src="img/img/collect1.png" alt="">
+                        </div>
+                      </div>
+                      <div class="shop-box">
+                        <img src="img/img/img12.jpeg" alt="">
+                        <div class="shop-text">
+                          <h4> 相对论</h4>
+                          <p>地址:成都市高新区府城大道88号</p>
+                          <button class="btn btn-success enter">点击进入</button>
+                        </div>
+                        <div class="shop-collect">
+                          <img class="show" src="img/img/collect1.png" alt="">
+                        </div>
+                      </div>
+                      <div class="shop-box">
+                        <img src="img/img/img10.jpeg" alt="">
+                        <div class="shop-text">
+                          <h4>宫廷糕点</h4>
+                          <p>地址:成都市青羊区酱园公所街56号</p>
+                          <button class="btn btn-success enter">点击进入</button>
+                        </div>
+                        <div class="shop-collect">
+                          <img class="show" src="img/img/collect1.png" alt="">
+                        </div>
+                      </div>
+                      <div class="shop-box">
+                        <img src="img/img/img7.jpeg" alt="">
+                        <div class="shop-text">
+                          <h4> 曼哈顿</h4>
+                          <p>地址:成都市武侯区人民南路49号</p>
+                          <button class="btn btn-success enter">点击进入</button>
+                        </div>
+                        <div class="shop-collect">
+                          <img class="show" src="img/img/collect1.png" alt="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-none" id="food">  <div class="food_details p-5 animated fadeInUp">
+                      <div class="row">
+                        <div class="col-4">
+                          <div class="food_box border text-center p-3 pl-0">
+                            <img src="img/carousel/img4.jpeg" />
+                            <div class="mt-2">汉堡</div>
+                            <div class="hide_info animated rotateIn">Hamburger
+                              除了表示“汉堡包”，还有“碎牛肉，牛肉饼”的意思，可见汉堡包里的肉多半是牛肉做的。不过后来“猪柳”、“鱼香”、“鸡肉”等类型的汉堡包又陆续推出，可见光靠牛肉是没法“一招鲜吃遍天”了。</div>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="food_box border text-center  p-3">
+                            <img src="img/carousel/img5.jpeg" />
+                            <div class="mt-2">咖喱</div>
+                            <div class="hide_info animated rotateIn">咖喱（也写作咖哩）是由多种香料调配而成的酱料，常见于印度菜、泰国菜和日本菜等东南亚地区菜系，一般伴随肉类和饭一起吃。。</div>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="food_box border text-center  p-3">
+                            <img src="img/carousel/img6.jpeg" />
+                            <div class="mt-2">咖啡</div>
+                            <div class="hide_info animated rotateIn">“咖啡”一词源自希腊语“Kaweh”，意思是“力量与热情”。在世界各地，人们越来越爱喝咖啡。随之而来的“咖啡文化”充满生活的每个时刻。无论在家里、还是在办公室、或是各种社交场合，人们都在品着咖啡、它逐渐与时尚、现代生活联系在一起。</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mt-5">
+                        <div class="col-4">
+                          <div class="food_box border text-center p-3 pl-0">
+                            <img src="img/img/img7.jpeg" />
+                            <div class="mt-2">炒饭</div>
+                            <div class="hide_info animated rotateIn">炒饭是常见的一种食物，一般分为多种品类，如：扬州炒饭、香肠炒饭、西红柿炒饭、咖喱炒饭、培根炒饭等。很受大众追捧，在各个地方也特色化。主要材料是用煮好的米饭、一些菜肴、鸡蛋爆炒而成。一般大众把炒饭当做早饭或者是晚饭，因为炒饭制作方便，耗时较少</div>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="food_box border text-center  p-3">
+                            <img src="img/img/img8.jpeg" />
+                            <div class="mt-2">薯条</div>
+                            <div class="hide_info animated rotateIn">薯条（英文名French
+                              fries）是一种以马铃薯为原料，源起于比利时，切成条状后油炸而成的食品，是现在最常见的快餐食品之一，流行于世界各地。</div>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="food_box border text-center  p-3">
+                            <img src="img/img/img9.jpeg" />
+                            <div class="mt-2">下午时光</div>
+                            <div class="hide_info animated rotateIn">我想，我们的人生就是这样的，谁与谁相逢，未必再有下一次，但这一次却足够温暖我们整整一个下午的时光。</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mt-5">
+                        <div class="col-4">
+                          <div class="food_box border text-center p-3 pl-0">
+                            <img src="img/img/img10.jpeg" />
+                            <div class="mt-2">蛋糕</div>
+                            <div class="hide_info animated rotateIn">蛋糕是一种古老的西点，一般是由烤箱制作的，蛋糕是用鸡蛋、白糖、小麦粉为主要原料。以牛奶、果汁、奶粉、香粉、色拉油、水，起酥油、泡打粉为辅料。经过搅拌、调制、烘烤后制成一种像海绵的点心。</div>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="food_box border text-center  p-3">
+                            <img src="img/img/img11.jpeg" />
+                            <div class="mt-2">约会</div>
+                            <div class="hide_info animated rotateIn">约会（大多数时候被称为拍拖），是预约会面的一种，原指预先约定时间地点会面的活动。约定会面。包含了朋友同事之间或者恋爱的约定的会面，在粤语当中不仅可以称为拍拖，也可称为去街、行街（这些词都有男女约会的意思）。</div>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="food_box border text-center  p-3">
+                            <img src="img/img/img12.jpeg" />
+                            <div class="mt-2">火锅</div>
+                            <div class="hide_info animated rotateIn">火锅(英语：Hot Pot [1]
+                              )，古称“古董羹”，因食物投入沸水时发出的“咕咚”声而得名，它是中国独创的美食，历史悠久，是一种老少皆宜的食物。</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="background_person">
+          </div>
         </div>
       </div>
     </div>
   </section>
   <!-- 尾部 -->
   <footer class="mt-5">
-      <div class="text-center pb-4">&copy;2018&nbsp;我们的团队&nbsp;</div>
+    <div class="text-center pb-4">&copy;2018&nbsp;我们的团队&nbsp;</div>
   </footer>
   <script src="js/def/map.js"> </script>
+  <script src="js/def/def.js"></script>
+
 </body>
 
 </html>
