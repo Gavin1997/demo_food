@@ -6,7 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/swiper.min.css">
+    <!-- 引入bootstap和jquery和echarts cdn-->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <script src=" https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
     <style>
         html,
         body {
@@ -49,26 +68,192 @@
             -webkit-align-items: center;
             align-items: center;
         }
+
+        #carousel_imgs {
+            width: 100%;
+            height: 100%;
+        }
     </style>
 </head>
 
 <body>
-        <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">Slide 1</div>
-                    <div class="swiper-slide">Slide 2</div>
-                    <div class="swiper-slide">Slide 3</div>
-                    <div class="swiper-slide">Slide 4</div>
-                    <div class="swiper-slide">Slide 5</div>
-                    <div class="swiper-slide">Slide 6</div>
-                    <div class="swiper-slide">Slide 7</div>
-                    <div class="swiper-slide">Slide 8</div>
-                    <div class="swiper-slide">Slide 9</div>
-                    <div class="swiper-slide">Slide 10</div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <!-- 轮播 -->
+            <div class="swiper-slide animated rotateIn">
+                <div id="carousel_imgs" class="carousel" data-ride="carousel">
+                    <!-- 导航指示器 -->
+                    <ul class="carousel-indicators">
+                        <li class="active" data-target="#carousel_imgs" data-slide-to="0"></li>
+                        <li data-target="#carousel_imgs" data-slide-to="1"></li>
+                        <li data-target="#carousel_imgs" data-slide-to="2"></li>
+                        <li data-target="#carousel_imgs" data-slide-to="3"></li>
+                        <li data-target="#carousel_imgs" data-slide-to="4"></li>
+                        <li data-target="#carousel_imgs" data-slide-to="5"></li>
+                    </ul>
+                    <!-- 轮播的图片 -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/carousel/img1.jpeg" class="w-100" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/carousel/img2.jpeg" class="w-100" alt="" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/carousel/img3.jpeg" class="w-100" alt="" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/carousel/img4.jpeg" class="w-100" alt="" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/carousel/img5.jpeg" class="w-100" alt="" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/carousel/img6.jpeg" class="w-100" alt="" />
+                        </div>
+                    </div>
+                    <!-- 轮播左右箭头 -->
+                    <a href="#carousel_imgs" class="carousel-control-prev" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a href="#carousel_imgs" class="carousel-control-next" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
                 </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
+                <div class="text_show">
+                    <h1 class="text-white  animated fadeInRight">一个人也要好好吃饭</h1>
+                </div>
             </div>
+            <!-- 地图 -->
+            <div class="swiper-slide animated ">
+                <div id="container" style="height: 100% ;width:100%;"></div>
+            </div>
+
+            <!-- 店铺 -->
+            <div class="swiper-slide animated ">
+                <div class="shop-line">
+                    <div class="shop-box" data-target="#quite" data-toggle="shop-store-container">
+                        <img src="img/img/quiet.jpeg" alt="">
+                        <div class="shop-text">
+                            <!-- <h4> 小龙坎老火锅</h4>
+                                <p>地址:成都市东大街36号</p>
+                                <button class="btn btn-success enter">点击进入</button> -->
+                        </div>
+                        <div class="shop-collect">
+                            <h1>安静</h1>
+                            <img class="show" src="img/img/collect1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="shop-box" data-target="#busy" data-toggle="shop-store-container">
+                        <img src="img/img/busy.jpeg" alt="">
+                        <div class="shop-text">
+                            <!-- <h4> 红杏酒家</h4>
+                                <p>地址:成都市金牛区一品天下</p>
+                                <button class="btn btn-success enter">点击进入</button> -->
+                        </div>
+                        <div class="shop-collect">
+                            <h1>热闹</h1>
+                            <img class="show" src="img/img/collect1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="shop-box" data-target="#fast" data-toggle="shop-store-container">
+                        <img src="img/img/fast.jpeg" alt="">
+                        <div class="shop-text">
+                            <!-- <h4> 汉堡王</h4>
+                                <p>地址:成都市锦江区九眼桥附近</p>
+                                <button class="btn btn-success enter">点击进入</button> -->
+                        </div>
+                        <div class="shop-collect">
+                            <h1>快餐</h1>
+                            <img class="show" src="img/img/collect1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="shop-box" data-target="#style" data-toggle="shop-store-container">
+                        <img src="img/img/style.jpg" alt="">
+                        <div class="shop-text">
+                            <!-- <h4> 相对论</h4>
+                                <p>地址:成都市高新区府城大道88号</p>
+                                <button class="btn btn-success enter">点击进入</button> -->
+                        </div>
+                        <div class="shop-collect">
+                            <h1>格调</h1>
+                            <img class="show" src="img/img/collect1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="shop-box" data-target="#light" data-toggle="shop-store-container">
+                        <img src="img/img/light.jpeg" alt="">
+                        <div class="shop-text">
+                            <!-- <h4>宫廷糕点</h4>
+                                <p>地址:成都市青羊区酱园公所街56号</p>
+                                <button class="btn btn-success enter">点击进入</button> -->
+                        </div>
+                        <div class="shop-collect">
+                            <h1>轻食</h1>
+                            <img class="show" src="img/img/collect1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="shop-box" data-target="#webhot" data-toggle="shop-store-container">
+                        <img src="img/img/webhot.jpeg" alt="">
+                        <div class="shop-text">
+                            <!-- <h4> 曼哈顿</h4>
+                                <p>地址:成都市武侯区人民南路49号</p>
+                                <button class="btn btn-success enter">点击进入</button> -->
+                        </div>
+                        <div class="shop-collect">
+                            <h1>网红</h1>
+                            <img class="show" src="img/img/collect1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 食谱 -->
+            <div class="swiper-slide animated ">
+                <div id="menu_food_sample" class="container">
+                    <div class="row mt-5">
+                        <!-- 今日推荐 -->
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-6"><button class="btn btn-danger my_rounded w-100">今日推荐</button></div>
+                                <div class="col-6 mt-1"><span>2178984</span><img class="ml-2" src="./img/logo/collect.png"
+                                        alt="" width="25"></div>
+                                <div class="row  m-4">
+                                    <div class="col-12">
+                                        <img class="w-100" src="./img/img/img15.jpeg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 d-flex">
+                            <span class="cur-off"></span>
+                            <div class="recommend_wrap ">
+                                <h5 class="animated fadeInRight">让人垂涎的好菜.</h5>
+                                <h6 class="animated fadeInLeft mt-4 text-info">世间最满足的感觉莫过于将大块的蛋白质和软糯的淀粉一道送入口中，
+                                    慢慢咀嚼，
+                                    唇齿间渗透出丝丝甘甜和油脂醇香，
+                                    那种对于卡路里和胆固醇肆无忌惮的占有，
+                                    简直满足了人类植根于基因里对食物一切美好的想象!</h6>
+                                <p class="animated fadeInRightBig mt-4">我爱食物，食物爱脂肪，脂肪爱我。</p>
+                                <div class="btn-group mt-5">
+                                    <button class="btn btn-info">超低卡!</button>
+                                    <button class="btn btn-success">超省时!</button>
+                                    <button class="btn btn-warning">颜值高!</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide animated">
+                <div class="mt-5" style="transform: translateX(-100px)">
+                    <iframe src="./find.html" frameborder="0" width="1260" height="600px"></iframe>
+                </div>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+    <script src="js/def/def.js"></script>
+    <script src="js/def/map_sub.js"></script>
     <script src="js/swiper.min.js"></script>
     <!-- Initialize Swiper -->
     <script>
