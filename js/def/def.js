@@ -73,4 +73,15 @@ $(function(){
             $(".my_dropdown_person").addClass("d-none");
         }
     });
+    // 处理食谱三级页面店铺类型的显示
+     // 处理下来菜单与页面的联动显示与隐藏
+     $("[data-toggle=shop-store-container]").click(function(e){
+        e.preventDefault();
+        let $item = $(e.target);
+        let showId = $item.parent().attr("data-target");
+        if($(showId).is(".d-none")){
+            $(showId).removeClass("d-none").siblings().not(".background_food").addClass("d-none");
+            $(".my_dropdown_food").addClass("d-none");
+        }
+    });
 });

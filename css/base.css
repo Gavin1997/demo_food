@@ -221,6 +221,7 @@ button {
     left: 0;
     background: rgba(0, 0, 0, 0.548);
     display: none;
+    cursor: pointer;
 }
 .shop-collect h1{
     color: white;

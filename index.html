@@ -127,8 +127,9 @@
         </div>
         <!-- 店铺 -->
         <div class="tab-pane  animated fadeInUp" id="menu-store">
+          <!-- 一级页面;类型 -->
           <div class="shop-line">
-            <div class="shop-box">
+            <div class="shop-box"  data-target="#quite" data-toggle="shop-store-container">
               <img src="img/img/quiet.jpeg" alt="">
               <div class="shop-text">
                 <!-- <h4> 小龙坎老火锅</h4>
@@ -140,7 +141,7 @@
                 <img class="show" src="img/img/collect1.png" alt="">
               </div>
             </div>
-            <div class="shop-box">
+            <div class="shop-box"  data-target="#busy" data-toggle="shop-store-container">
               <img src="img/img/busy.jpeg" alt="">
               <div class="shop-text">
                 <!-- <h4> 红杏酒家</h4>
@@ -152,7 +153,7 @@
                 <img class="show" src="img/img/collect1.png" alt="">
               </div>
             </div>
-            <div class="shop-box">
+            <div class="shop-box"  data-target="#fast" data-toggle="shop-store-container">
               <img src="img/img/fast.jpeg" alt="">
               <div class="shop-text">
                 <!-- <h4> 汉堡王</h4>
@@ -164,7 +165,7 @@
                 <img class="show" src="img/img/collect1.png" alt="">
               </div>
             </div>
-            <div class="shop-box">
+            <div class="shop-box"  data-target="#style" data-toggle="shop-store-container">
               <img src="img/img/style.jpg" alt="">
               <div class="shop-text">
                 <!-- <h4> 相对论</h4>
@@ -176,7 +177,7 @@
                 <img class="show" src="img/img/collect1.png" alt="">
               </div>
             </div>
-            <div class="shop-box">
+            <div class="shop-box"  data-target="#light" data-toggle="shop-store-container">
               <img src="img/img/light.jpeg" alt="">
               <div class="shop-text">
                 <!-- <h4>宫廷糕点</h4>
@@ -188,7 +189,7 @@
                 <img class="show" src="img/img/collect1.png" alt="">
               </div>
             </div>
-            <div class="shop-box">
+            <div class="shop-box"  data-target="#webhot" data-toggle="shop-store-container">
               <img src="img/img/webhot.jpeg" alt="">
               <div class="shop-text">
                 <!-- <h4> 曼哈顿</h4>
@@ -201,7 +202,16 @@
               </div>
             </div>
           </div>
-          
+          <!-- 二级页面,6个店铺 -->
+          <div class="shop-store-container">
+            <div id="quite" class="d-none">安静</div>
+            <div id="busy" class="d-none">忙碌</div>
+            <div id="fast" class="d-none">快餐</div>
+            <div id="style" class="d-none">格调</div>
+            <div id="light" class="d-none">轻食</div>
+            <div id="webhot" class="d-none">网红</div>
+          </div>
+          <!-- 三级页面 -->
           <div class="food_intro animated" id="food_intro">
             <div class="row">
               <div class="col-12 border p-5">
