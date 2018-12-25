@@ -174,11 +174,11 @@
     background-size:100% ; 
 }
 .shop-box {
-    width: 280px;
-    height: 340px;
+    width: 330px;
+    height: 230px;
     background: white;
-    margin-right: 46px;
-    margin-left: 46px;
+    margin-right: 20px;
+    margin-left: 23px;
     margin-bottom: 50px;
     float: left;
     box-shadow: #cccccc 0px 0px 10px 5px;
@@ -194,7 +194,9 @@
 }
 .shop-box img {
     width: 100%;
-    height: 55%;
+    height:100%;
+    text-align: center;
+    overflow: hidden;
 }
 
 button {
@@ -213,20 +215,27 @@ button {
 
 .shop-collect {
     width: 100%;
-    height: 55%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.548);
     display: none;
 }
-
-.shop-collect img{
-    width: 80px;
-    height: 80px;
+.shop-collect h1{
+    color: white;
+    font-size: 40px;
     position: absolute;
-    left: calc(50% - 40px);
-    top: calc(50% - 40px);
+    left: calc(50% - 10px);
+    top: calc(50% - 20px);
+    cursor: pointer;
+}
+.shop-collect img{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 30%;
+    top: calc(50% - 20px);
     cursor: pointer;
 }
 /* 个人 */
