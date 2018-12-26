@@ -81,15 +81,16 @@
           <iframe src="./home.html" frameborder="0" width="100%" height="100%;" id="home_page" style="z-index: 101"></iframe>
           <script>
             $("#home_page").attr("height", $(window).height());
+            $("html").animate({scrollTop:0},500);
             </script>
         </div>
         <!-- 地图 -->
-        <div class="tab-pane container animated fadeInUp" id="menu-map">
+        <div class="tab-pane container animated fadeInLeft" id="menu-map">
           <div id="container" style="height: 1000px ;width:1120px;"></div>
           <div class="background_map"></div>
         </div>
         <!-- 店铺 -->
-        <div class="tab-pane  container animated fadeInUp" id="menu-store">
+        <div class="tab-pane  container animated fadeInLeft" id="menu-store">
           <!-- 一级页面;类型 -->
           <div class="shop-line">
             <div class="shop-box" data-target="#quite" data-toggle="shop-store-container">
@@ -169,7 +170,7 @@
           <hr/>
           <!-- 二级页面,6个店铺 -->
           <div class="shop-store-container">
-            <div id="quite" class="d-none">
+            <div id="quite" class="d-none animated fadeInLeft">
               <div class="shop-line">
                 <div class="shop-box-classify" data-target="#quite" data-toggle="shop-store-container">
                   <img src="img/img/quiet1.jpg" alt="">
@@ -247,7 +248,7 @@
 
               </div>
             </div>
-            <div id="busy" class="d-none">
+            <div id="busy" class="d-none animated fadeInLeft">
 
               <div class="shop-line">
                 <div class="shop-box-classify" data-target="#quite" data-toggle="shop-store-container">
@@ -326,7 +327,7 @@
               </div>
 
             </div>
-            <div id="fast" class="d-none">
+            <div id="fast" class="d-none animated zoomIn">
 
               <div class="shop-line">
                 <div class="shop-box-classify" data-target="#quite" data-toggle="shop-store-container">
@@ -409,7 +410,7 @@
               </div>
 
             </div>
-            <div id="style" class="d-none">
+            <div id="style" class="d-none animated rotateIn">
 
               <div class="shop-line">
                 <div class="shop-box-classify" data-target="#quite" data-toggle="shop-store-container">
@@ -498,7 +499,7 @@
 
               </div>
             </div>
-            <div id="light" class="d-none">
+            <div id="light" class="d-none animated bounceInLeft">
 
               <div class="shop-line">
                 <div class="shop-box-classify" data-target="#quite" data-toggle="shop-store-container">
@@ -591,7 +592,7 @@
 
               </div>
             </div>
-            <div id="webhot" class="d-none">
+            <div id="webhot" class="d-none animated fadeInRightBig">
 
               <div class="shop-line">
                 <div class="shop-box-classify" data-target="#quite" data-toggle="shop-store-container">
@@ -712,7 +713,7 @@
           <div class="background_shop"></div>
         </div>
         <!-- 食谱 -->
-        <div class="tab-pane container animated fadeInUp" id="menu-food">
+        <div class="tab-pane container animated fadeInLeft" id="menu-food">
           <!-- 早餐 -->
           <div id="menu_food_breakfast" style="margin-top:6rem;">
             <!-- 菜式选择 -->
@@ -760,100 +761,247 @@
               </div>
             </div>
             <!-- 食谱具体展示 -->
-            <div class="food_details p-5 animated fadeInUp">
-              <div class="row">
-                <div class="col-4">
-                  <div class="food_box border text-center p-3 pl-0">
-                    <img src="img/carousel/img4.jpeg" />
-                    <div class="mt-2">汉堡</div>
-                    <div class="hide_info animated rotateIn">Hamburger
-                      除了表示“汉堡包”，还有“碎牛肉，牛肉饼”的意思，可见汉堡包里的肉多半是牛肉做的。不过后来“猪柳”、“鱼香”、“鸡肉”等类型的汉堡包又陆续推出，可见光靠牛肉是没法“一招鲜吃遍天”了。</div>
+              <div class="food_details p-5 animated fadeInUp">
+                <div class="row">
+                  <div class="col-4" data-toggle="food_menu_sub" data-target="#food1">
+                    <div class="food_box border text-center p-3 pl-0">
+                      <img src="img/carousel/img4.jpeg" />
+                      <div class="mt-2">汉堡</div>
+                      <div class="hide_info animated rotateIn"  data-toggle="food_menu_sub" data-target="#food1">Hamburger
+                        除了表示“汉堡包”，还有“碎牛肉，牛肉饼”的意思，可见汉堡包里的肉多半是牛肉做的。不过后来“猪柳”、“鱼香”、“鸡肉”等类型的汉堡包又陆续推出，可见光靠牛肉是没法“一招鲜吃遍天”了。</div>
+                    </div>
+                  </div>
+                  <div class="col-4" data-toggle="food_menu_sub" data-target="#food2">
+                    <div class="food_box border text-center  p-3">
+                      <img src="img/carousel/img5.jpeg" />
+                      <div class="mt-2">咖喱</div>
+                      <div class="hide_info animated rotateIn"  data-toggle="food_menu_sub" data-target="#food2">咖喱（也写作咖哩）是由多种香料调配而成的酱料，常见于印度菜、泰国菜和日本菜等东南亚地区菜系，一般伴随肉类和饭一起吃。。</div>
+                    </div>
+                  </div>
+                  <div class="col-4" data-toggle="#food_menu_sub" data-target="#food3">
+                    <div class="food_box border text-center  p-3">
+                      <img src="img/carousel/img6.jpeg" />
+                      <div class="mt-2">咖啡</div>
+                      <div class="hide_info animated rotateIn" data-toggle="#food_menu_sub" data-target="#food3">“咖啡”一词源自希腊语“Kaweh”，意思是“力量与热情”。在世界各地，人们越来越爱喝咖啡。随之而来的“咖啡文化”充满生活的每个时刻。无论在家里、还是在办公室、或是各种社交场合，人们都在品着咖啡、它逐渐与时尚、现代生活联系在一起。</div>
+                    </div>
                   </div>
                 </div>
-                <div class="col-4">
-                  <div class="food_box border text-center  p-3">
-                    <img src="img/carousel/img5.jpeg" />
-                    <div class="mt-2">咖喱</div>
-                    <div class="hide_info animated rotateIn">咖喱（也写作咖哩）是由多种香料调配而成的酱料，常见于印度菜、泰国菜和日本菜等东南亚地区菜系，一般伴随肉类和饭一起吃。。</div>
+                <div class="row mt-5">
+                  <div class="col-4" data-toggle="food_menu_sub" data-target="#food4">
+                    <div class="food_box border text-center p-3 pl-0">
+                      <img src="img/img/img7.jpeg" />
+                      <div class="mt-2">炒饭</div>
+                      <div class="hide_info animated rotateIn" data-toggle="food_menu_sub" data-target="#food4">炒饭是常见的一种食物，一般分为多种品类，如：扬州炒饭、香肠炒饭、西红柿炒饭、咖喱炒饭、培根炒饭等。很受大众追捧，在各个地方也特色化。主要材料是用煮好的米饭、一些菜肴、鸡蛋爆炒而成。一般大众把炒饭当做早饭或者是晚饭，因为炒饭制作方便，耗时较少</div>
+                    </div>
+                  </div>
+                  <div class="col-4" data-toggle="food_menu_sub" data-target="#food5">
+                    <div class="food_box border text-center  p-3">
+                      <img src="img/img/img8.jpeg" />
+                      <div class="mt-2">薯条</div>
+                      <div class="hide_info animated rotateIn"  data-toggle="food_menu_sub" data-target="#food5">薯条（英文名French
+                        fries）是一种以马铃薯为原料，源起于比利时，切成条状后油炸而成的食品，是现在最常见的快餐食品之一，流行于世界各地。</div>
+                    </div>
+                  </div>
+                  <div class="col-4"  data-toggle="food_menu_sub" data-target="#food6">
+                    <div class="food_box border text-center  p-3">
+                      <img src="img/img/img9.jpeg" />
+                      <div class="mt-2">下午时光</div>
+                      <div class="hide_info animated rotateIn"  data-toggle="food_menu_sub" data-target="#food6">我想，我们的人生就是这样的，谁与谁相逢，未必再有下一次，但这一次却足够温暖我们整整一个下午的时光。</div>
+                    </div>
                   </div>
                 </div>
-                <div class="col-4">
-                  <div class="food_box border text-center  p-3">
-                    <img src="img/carousel/img6.jpeg" />
-                    <div class="mt-2">咖啡</div>
-                    <div class="hide_info animated rotateIn">“咖啡”一词源自希腊语“Kaweh”，意思是“力量与热情”。在世界各地，人们越来越爱喝咖啡。随之而来的“咖啡文化”充满生活的每个时刻。无论在家里、还是在办公室、或是各种社交场合，人们都在品着咖啡、它逐渐与时尚、现代生活联系在一起。</div>
+                <div class="row mt-5">
+                  <div class="col-4" data-toggle="food_menu_sub" data-target="#food7">
+                    <div class="food_box border text-center p-3 pl-0">
+                      <img src="img/img/img10.jpeg" />
+                      <div class="mt-2">蛋糕</div>
+                      <div class="hide_info animated rotateIn"  data-toggle="food_menu_sub" data-target="#food7">蛋糕是一种古老的西点，一般是由烤箱制作的，蛋糕是用鸡蛋、白糖、小麦粉为主要原料。以牛奶、果汁、奶粉、香粉、色拉油、水，起酥油、泡打粉为辅料。经过搅拌、调制、烘烤后制成一种像海绵的点心。</div>
+                    </div>
+                  </div>
+                  <div class="col-4" data-toggle="food_menu_sub" data-target="#food8">
+                    <div class="food_box border text-center  p-3">
+                      <img src="img/img/img11.jpeg" />
+                      <div class="mt-2">约会</div>
+                      <div class="hide_info animated rotateIn" data-toggle="food_menu_sub" data-target="#food8">约会（大多数时候被称为拍拖），是预约会面的一种，原指预先约定时间地点会面的活动。约定会面。包含了朋友同事之间或者恋爱的约定的会面，在粤语当中不仅可以称为拍拖，也可称为去街、行街（这些词都有男女约会的意思）。</div>
+                    </div>
+                  </div>
+                  <div class="col-4" data-toggle="food_menu_sub" data-target="#food9">
+                    <div class="food_box border text-center  p-3">
+                      <img src="img/img/img12.jpeg" />
+                      <div class="mt-2">火锅</div>
+                      <div class="hide_info animated rotateIn" data-toggle="food_menu_sub" data-target="#food9">火锅(英语：Hot Pot [1]
+                        )，古称“古董羹”，因食物投入沸水时发出的“咕咚”声而得名，它是中国独创的美食，历史悠久，是一种老少皆宜的食物。</div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="row mt-5">
-                <div class="col-4">
-                  <div class="food_box border text-center p-3 pl-0">
-                    <img src="img/img/img7.jpeg" />
-                    <div class="mt-2">炒饭</div>
-                    <div class="hide_info animated rotateIn">炒饭是常见的一种食物，一般分为多种品类，如：扬州炒饭、香肠炒饭、西红柿炒饭、咖喱炒饭、培根炒饭等。很受大众追捧，在各个地方也特色化。主要材料是用煮好的米饭、一些菜肴、鸡蛋爆炒而成。一般大众把炒饭当做早饭或者是晚饭，因为炒饭制作方便，耗时较少</div>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <div class="food_box border text-center  p-3">
-                    <img src="img/img/img8.jpeg" />
-                    <div class="mt-2">薯条</div>
-                    <div class="hide_info animated rotateIn">薯条（英文名French
-                      fries）是一种以马铃薯为原料，源起于比利时，切成条状后油炸而成的食品，是现在最常见的快餐食品之一，流行于世界各地。</div>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <div class="food_box border text-center  p-3">
-                    <img src="img/img/img9.jpeg" />
-                    <div class="mt-2">下午时光</div>
-                    <div class="hide_info animated rotateIn">我想，我们的人生就是这样的，谁与谁相逢，未必再有下一次，但这一次却足够温暖我们整整一个下午的时光。</div>
+              <!-- 食谱三级页面 食谱详情 -->
+            <div>
+              <div class="food_intro d-none animated fadeInLeft" id="food1">
+                <div class="row">
+                  <div class="col-12 border p-5">
+                    <div class="food_intro_img"></div>
+                    <div class="text-center mt-3">
+                      <p>材料:</p>
+                      <p>苹果,草莓</p>
+                      <p>菠萝,葡萄</p>
+                      <p>蓝莓,西瓜</p>
+                      <hr>
+                      <p>做法:</p>
+                      <p>首先，先将水果洗净，再切成块状（也可以削皮）</p>
+                      <p>然后，将切好的水果放入碗里。</p>
+                      <p>最后，可将搅拌好的水果沙拉放入冰箱，直到冷却即可食用。</p>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="row mt-5">
-                <div class="col-4">
-                  <div class="food_box border text-center p-3 pl-0">
-                    <img src="img/img/img10.jpeg" />
-                    <div class="mt-2">蛋糕</div>
-                    <div class="hide_info animated rotateIn">蛋糕是一种古老的西点，一般是由烤箱制作的，蛋糕是用鸡蛋、白糖、小麦粉为主要原料。以牛奶、果汁、奶粉、香粉、色拉油、水，起酥油、泡打粉为辅料。经过搅拌、调制、烘烤后制成一种像海绵的点心。</div>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <div class="food_box border text-center  p-3">
-                    <img src="img/img/img11.jpeg" />
-                    <div class="mt-2">约会</div>
-                    <div class="hide_info animated rotateIn">约会（大多数时候被称为拍拖），是预约会面的一种，原指预先约定时间地点会面的活动。约定会面。包含了朋友同事之间或者恋爱的约定的会面，在粤语当中不仅可以称为拍拖，也可称为去街、行街（这些词都有男女约会的意思）。</div>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <div class="food_box border text-center  p-3">
-                    <img src="img/img/img12.jpeg" />
-                    <div class="mt-2">火锅</div>
-                    <div class="hide_info animated rotateIn">火锅(英语：Hot Pot [1]
-                      )，古称“古董羹”，因食物投入沸水时发出的“咕咚”声而得名，它是中国独创的美食，历史悠久，是一种老少皆宜的食物。</div>
+              <div class="food_intro d-none animated fadeInLeft" id="food2">
+                <div class="row">
+                  <div class="col-12 border p-5">
+                    <div class="food_intro_img"></div>
+                    <div class="text-center mt-3">
+                      <p>材料:</p>
+                      <p>苹果,草莓</p>
+                      <p>菠萝,葡萄</p>
+                      <p>蓝莓,西瓜</p>
+                      <hr>
+                      <p>做法:</p>
+                      <p>首先，先将水果洗净，再切成块状（也可以削皮）</p>
+                      <p>然后，将切好的水果放入碗里。</p>
+                      <p>最后，可将搅拌好的水果沙拉放入冰箱，直到冷却即可食用。</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <!-- 食谱三级页面 食谱详情 -->
-            <div class="food_intro" id="food_intro">
-              <div class="row">
-                <div class="col-12 border p-5">
-                  <div class="food_intro_img"></div>
-                  <div class="text-center mt-3">
-                    <p>材料:</p>
-                    <p>苹果,草莓</p>
-                    <p>菠萝,葡萄</p>
-                    <p>蓝莓,西瓜</p>
-                    <hr>
-                    <p>做法:</p>
-                    <p>首先，先将水果洗净，再切成块状（也可以削皮）</p>
-                    <p>然后，将切好的水果放入碗里。</p>
-                    <p>最后，可将搅拌好的水果沙拉放入冰箱，直到冷却即可食用。</p>
+              <div class="food_intro d-none animated fadeInLeft" id="food3">
+                <div class="row">
+                  <div class="col-12 border p-5">
+                    <div class="food_intro_img"></div>
+                    <div class="text-center mt-3">
+                      <p>材料:</p>
+                      <p>苹果,草莓</p>
+                      <p>菠萝,葡萄</p>
+                      <p>蓝莓,西瓜</p>
+                      <hr>
+                      <p>做法:</p>
+                      <p>首先，先将水果洗净，再切成块状（也可以削皮）</p>
+                      <p>然后，将切好的水果放入碗里。</p>
+                      <p>最后，可将搅拌好的水果沙拉放入冰箱，直到冷却即可食用。</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="food_intro d-none animated fadeInLeft" id="food4">
+                <div class="row">
+                  <div class="col-12 border p-5">
+                    <div class="food_intro_img"></div>
+                    <div class="text-center mt-3">
+                      <p>材料:</p>
+                      <p>苹果,草莓</p>
+                      <p>菠萝,葡萄</p>
+                      <p>蓝莓,西瓜</p>
+                      <hr>
+                      <p>做法:</p>
+                      <p>首先，先将水果洗净，再切成块状（也可以削皮）</p>
+                      <p>然后，将切好的水果放入碗里。</p>
+                      <p>最后，可将搅拌好的水果沙拉放入冰箱，直到冷却即可食用。</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="food_intro d-none animated fadeInLeft" id="food5">
+                <div class="row">
+                  <div class="col-12 border p-5">
+                    <div class="food_intro_img"></div>
+                    <div class="text-center mt-3">
+                      <p>材料:</p>
+                      <p>苹果,草莓</p>
+                      <p>菠萝,葡萄</p>
+                      <p>蓝莓,西瓜</p>
+                      <hr>
+                      <p>做法:</p>
+                      <p>首先，先将水果洗净，再切成块状（也可以削皮）</p>
+                      <p>然后，将切好的水果放入碗里。</p>
+                      <p>最后，可将搅拌好的水果沙拉放入冰箱，直到冷却即可食用。</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="food_intro d-none animated fadeInLeft" id="food6">
+                <div class="row">
+                  <div class="col-12 border p-5">
+                    <div class="food_intro_img"></div>
+                    <div class="text-center mt-3">
+                      <p>材料:</p>
+                      <p>苹果,草莓</p>
+                      <p>菠萝,葡萄</p>
+                      <p>蓝莓,西瓜</p>
+                      <hr>
+                      <p>做法:</p>
+                      <p>首先，先将水果洗净，再切成块状（也可以削皮）</p>
+                      <p>然后，将切好的水果放入碗里。</p>
+                      <p>最后，可将搅拌好的水果沙拉放入冰箱，直到冷却即可食用。</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="food_intro d-none animated fadeInLeft" id="food7">
+                <div class="row">
+                  <div class="col-12 border p-5">
+                    <div class="food_intro_img"></div>
+                    <div class="text-center mt-3">
+                      <p>材料:</p>
+                      <p>苹果,草莓</p>
+                      <p>菠萝,葡萄</p>
+                      <p>蓝莓,西瓜</p>
+                      <hr>
+                      <p>做法:</p>
+                      <p>首先，先将水果洗净，再切成块状（也可以削皮）</p>
+                      <p>然后，将切好的水果放入碗里。</p>
+                      <p>最后，可将搅拌好的水果沙拉放入冰箱，直到冷却即可食用。</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="food_intro d-none animated fadeInLeft" id="food8">
+                <div class="row">
+                  <div class="col-12 border p-5">
+                    <div class="food_intro_img"></div>
+                    <div class="text-center mt-3">
+                      <p>材料:</p>
+                      <p>苹果,草莓</p>
+                      <p>菠萝,葡萄</p>
+                      <p>蓝莓,西瓜</p>
+                      <hr>
+                      <p>做法:</p>
+                      <p>首先，先将水果洗净，再切成块状（也可以削皮）</p>
+                      <p>然后，将切好的水果放入碗里。</p>
+                      <p>最后，可将搅拌好的水果沙拉放入冰箱，直到冷却即可食用。</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="food_intro d-none animated fadeInLeft" id="food9">
+                <div class="row">
+                  <div class="col-12 border p-5">
+                    <div class="food_intro_img"></div>
+                    <div class="text-center mt-3">
+                      <p>材料:</p>
+                      <p>苹果,草莓</p>
+                      <p>菠萝,葡萄</p>
+                      <p>蓝莓,西瓜</p>
+                      <hr>
+                      <p>做法:</p>
+                      <p>首先，先将水果洗净，再切成块状（也可以削皮）</p>
+                      <p>然后，将切好的水果放入碗里。</p>
+                      <p>最后，可将搅拌好的水果沙拉放入冰箱，直到冷却即可食用。</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
           <!-- 简单 -->
           <div id="menu_food_sample" class="d-none" style="margin-top:6rem;">
             <div class="row mt-5">
@@ -965,18 +1113,92 @@
               </div>
             </div>
           </div>
-          <div id="menu_food_sweat" class="d-none" style="margin-top:6rem ">甜点</div>
+          <!-- 甜点 -->
+          <div id="menu_food_sweat" class="d-none" style="margin-top:6rem ">
+            <div class="food_details p-5 animated fadeInUp">
+              <div class="row">
+                <div class="col-4">
+                  <div class="food_box border text-center p-3 pl-0">
+                    <img src="img/sweet/img20.jpeg" />
+                    <div class="mt-2">蛋糕</div>
+                    <div class="hide_info animated rotateIn">蛋糕是一种面食，通常是甜的，典型的蛋糕是以烤的方式制作出来。蛋糕的材料主要包括了面粉、甜味剂(通常是蔗糖)、黏合剂(一般是鸡蛋，素食主义者可用面筋和淀粉代替)、起酥油（一般是牛油或人造牛油，低脂肪含量的蛋糕会以浓缩果汁代替），液体（牛奶，水或果汁），香精和发酵剂（例如酵母或者发酵粉）。</div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="food_box border text-center  p-3">
+                    <img src="img/sweet/img21.jpg" />
+                    <div class="mt-2">马卡龙</div>
+                    <div class="hide_info animated rotateIn">马卡龙，又称作玛卡龙、法式小圆饼，是一种用蛋白、杏仁粉、白砂糖和糖霜制作，并夹有水果酱或奶油的法式甜点。口感丰富，外脆内柔，外观五彩缤纷，精致小巧。</div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="food_box border text-center  p-3">
+                    <img src="img/sweet/img22.jpeg" />
+                    <div class="mt-2">粉色的奶油</div>
+                    <div class="hide_info animated rotateIn">生活中粉色还代表可爱，温馨，娇嫩、青春、明快、恋爱、萌等意义。</div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-5">
+                <div class="col-4">
+                  <div class="food_box border text-center p-3 pl-0">
+                    <img src="img/sweet/img33.jpeg" />
+                    <div class="mt-2">彩虹糖</div>
+                    <div class="hide_info animated rotateIn">风靡全球的彩虹果汁糖，脆脆的糖果外衣包裹着不同味道的水果软心，每一粒都有鲜艳的色彩和醒目的S标记，真正的鲜果滋味，不管你是单独品尝还是一把通吃，都有新鲜感受，激发无穷的想象力！</div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="food_box border text-center  p-3">
+                    <img src="img/sweet/img44.jpeg" />
+                    <div class="mt-2">甜甜圈</div>
+                    <div class="hide_info animated rotateIn">甜甜圈，又称多拿滋、唐纳滋，它是一种用面粉、白砂糖、奶油和鸡蛋混合之后再经过油炸的甜食。甜甜圈最普遍的两种形状是中空的环状、或面团中间有包入奶油、蛋浆（泛指蛋打成的液体）等甜馅料的封闭型甜甜圈。</div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="food_box border text-center  p-3">
+                    <img src="img/sweet/img55.jpeg" />
+                    <div class="mt-2">饴糖</div>
+                    <div class="hide_info animated rotateIn">饴糖是一种以米（淀粉）和以麦芽经过糖化熬煮而成的糖，呈粘稠状，俗称麦芽糖。自西周创制以来，民间流传普遍，广泛食用。</div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-5">
+                <div class="col-4">
+                  <div class="food_box border text-center p-3 pl-0">
+                    <img src="img/sweet/img66.jpeg" />
+                    <div class="mt-2">柠檬</div>
+                    <div class="hide_info animated rotateIn">柠檬（学名：Citrus limon (L.) Burm. f.），为双子叶植物纲芸香科柑橘属植物，柠檬又称柠果、洋柠檬、益母果等。 [1]  小乔木，枝少刺或近于无刺，嫩叶及花芽暗紫红色，叶片厚纸质，卵形或椭圆形。单花腋生或少花簇生。果椭圆形或卵形，果皮厚，通常粗糙，柠檬黄色，果汁酸至甚酸，种子小，卵形，端尖；种皮平滑，子叶乳白色，通常单或兼有多胚。花期4-5月，果期9-11月。</div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="food_box border text-center  p-3">
+                    <img src="img/sweet/img77.jpeg" />
+                    <div class="mt-2">牛油果</div>
+                    <div class="hide_info animated rotateIn">果实为一种营养价值很高的水果，含多种维生素、丰富的脂肪和蛋白质，钠、钾、镁、钙等含量也高，除作生果食用外也可作菜肴和罐头。
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="food_box border text-center  p-3">
+                    <img src="img/sweet/img88.jpeg" />
+                    <div class="mt-2">苹果</div>
+                    <div class="hide_info animated rotateIn">苹果是一种低热量食物，每100克产生60千卡热量。苹果中营养成分可溶性大，易被人体吸收，故有“活水”之称。其有利于溶解硫元素，使皮肤润滑柔嫩</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <p class="background_food"></p>
         </div>
         <!-- 发现 -->
-        <div class="tab-pane container animated fadeInUp" id="menu-find">
+        <div class="tab-pane container animated fadeInLeft" id="menu-find">
           <div class="mt-5" style="transform: translateX(-100px)">
             <iframe src="./find.html" frameborder="0" width="1260" height="600px"></iframe>
           </div>
           <div class="background_find"></div>
         </div>
         <!-- 个人中心 -->
-        <div class="tab-pane container animated fadeInUp" id="menu-person">
+        <div class="tab-pane container animated fadeInLeft" id="menu-person">
           <div class="row">
             <div class="col-12 mb-3">
               <div class="hr_line" style="margin-top:6rem;position:relative;">

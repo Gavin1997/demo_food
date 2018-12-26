@@ -14,8 +14,18 @@ $(function(){
     // 处理食谱图片点击跳转到详情页面
     $(".food_box").click(function(e){
         e.preventDefault();
-        $("html").animate({scrollTop:1200},500)
+        // $("html").animate({scrollTop:1200},500)
     });
+    $("[data-toggle=food_menu_sub]").click(function(e){
+        e.preventDefault();
+        let $item = $(e.target);
+        let showId = $item.attr("data-target");
+        if($(showId).is(".d-none")){
+            $(showId).removeClass("d-none").siblings().addClass("d-none");
+        }
+    });
+
+
     $(".enter").on("click",e=>{
         e.preventDefault();
         $("html").animate({scrollTop:1200},500);
