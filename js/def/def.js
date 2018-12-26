@@ -22,9 +22,14 @@ $(function(){
         let showId = $item.attr("data-target");
         if($(showId).is(".d-none")){
             $(showId).removeClass("d-none").siblings().addClass("d-none");
-        }
+        };
+         $("html").animate({scrollTop:1500},500)
     });
-
+   //返回顶部
+   $("#goBack").click(function(e){
+       e.preventDefault();
+       $('html').animate({scrollTop:0},500)
+   })
 
     $(".enter").on("click",e=>{
         e.preventDefault();

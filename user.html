@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <!-- 引入bootstap和jquery和echarts cdn-->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <script src=" https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        #carousel_imgs {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <!-- 用户1 -->
+            <div class="swiper-slide animated rotateIn bg_user1">
+                <div class="user_info">
+                    <div class="user_avator text-center">
+                        <div>
+                            <img src="./img/user/1.png" alt="" width="150" height="150">
+                        </div>
+                        <h5 class="mt-4">拉面丸子</h5>
+                    </div>
+                    <div class="row align-content-center" style="margin-top:6rem;">
+                        <div class="col-6">
+                            <div class="user_food">
+                                <img src="./img/user/1_1.png" alt="" width="740" height="543">
+                            </div>
+                        </div>
+                        <div class="col-6 mt-5">
+                            <p class="p-5 border border-info">
+                                为台盖的榴莲奶盖打call！我买的时候正好是武广二楼的台盖新店开业，买一送一的最后一天，排队的人也不多，大概15分钟的样子就排到了。
+                                榴莲奶盖绿芽的榴莲味奶盖真的好好喝，没得话说[强]。看到店员丢了一坨榴莲肉进去，
+                                和奶盖一起打的。
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- 用户2 -->
+            <div class="swiper-slide animated rotateIn bg_user2">
+                <div class="user_info">
+                    <div class="user_avator text-center">
+                        <div>
+                            <img src="./img/user/2.png" alt="" width="150" height="150">
+                        </div>
+                        <h5 class="mt-4">Linda</h5>
+                    </div>
+                    <div class="row align-content-center" style="margin-top:6rem;">
+                        <div class="col-6">
+                            <div class="user_food">
+                                <img src="./img/user/2_2.jpg" alt="" width="740" height="543">
+                            </div>
+                        </div>
+                        <div class="col-6 mt-5">
+                            <p class="p-5 border border-info">
+                                一大早从汉口专程到水路街拔草。阿斌豆皮没开门 [撇嘴],隔壁青山罗氏的面窝，李记的秘制牛肉粉吃完，就晃到了网红店龙班长蹄膀大王。店面很小但还干净。蹄鶻、蹄花、小黄鱼各买了-
+                                -些。回去吃了喜欢蹄花和小黄鱼[呲牙]。下回有机会去阿斌家吃豆皮的时候，有必要再到龙班长那买点蹄鶻和小黄鱼[呲牙]。
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- 3 -->
+            <div class="swiper-slide animated rotateIn bg_user3">
+                <div class="user_info">
+                    <div class="user_avator text-center">
+                        <div>
+                            <img src="./img/user/3.png" alt="" width="150" height="150">
+                        </div>
+                        <h5 class="mt-4">猫猫虫</h5>
+                    </div>
+                    <div class="row align-content-center" style="margin-top:6rem;">
+                        <div class="col-6">
+                            <div class="user_food">
+                                <img src="./img/user/3_3.png" alt="" width="740" height="543">
+                            </div>
+                        </div>
+                        <div class="col-6 mt-5">
+                            <p class="p-5 border border-info" style="min-width:880px;">
+                                一人食，美滋滋~一大早从汉口专程到水路街拔草。阿斌豆皮没开门
+                                [撇嘴],隔壁青山罗氏的面窝，李记的秘制牛肉粉吃完，就晃到了网红店龙班长蹄膀大王。店面很小但还干净。蹄鶻、蹄花、小黄鱼各买了-
+                                -些。回去吃了喜欢蹄花和小黄鱼[呲牙]。下回有机会去阿斌家吃豆皮的时候，有必要再到龙班长那买点蹄鶻和小黄鱼[呲牙]。
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- 4 -->
+            <div class="swiper-slide animated rotateIn bg_user4">
+                <div class="user_info">
+                    <div class="user_avator text-center">
+                        <div>
+                            <img src="./img/user/4.png" alt="" width="150" height="150">
+                        </div>
+                        <h5 class="mt-4">阿环不是阿坏</h5>
+                    </div>
+                    <div class="row align-content-center justify-content-between" style="margin-top:6rem;">
+                        <div class="col-6">
+                            <div class="user_food">
+                                <img src="./img/user/4_4.png" alt="" width="740" height="543">
+                            </div>
+                        </div>
+                        <div class="col-6 mt-5">
+                            <p class="p-5 border border-info" style="min-width:880px;">
+                                简易版煎饺抱蛋!太久没有自己做饭厨艺生疏了。
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- 5 -->
+            <div class="swiper-slide animated rotateIn bg_user5">
+                <div class="user_info">
+                    <div class="user_avator text-center">
+                        <div>
+                            <img src="./img/user/5.png" alt="" width="150" height="150">
+                        </div>
+                        <h5 class="mt-4">好吃不如你1993</h5>
+                    </div>
+                    <div class="row align-content-center justify-content-between" style="margin-top:6rem;">
+                        <div class="col-6">
+                            <div class="user_food">
+                                <img src="./img/user/5_5.png" alt="" width="740" height="543">
+                            </div>
+                        </div>
+                        <div class="col-6 mt-5">
+                            <p class="p-5 border border-info" style="min-width:880px;">
+                                    晚上自己做了顿卤煮火烧，倍儿香~
+                                    自己烙的死面火烧，外面很少有卖死面火烧的，只好自己动手。
+                                    大肠和肺头是从稻香村买的熟食，省事。自己回来再进行炝锅+各种佐料熬炖，配上韭菜花、酱豆腐、蒜汁、香菜、小香葱，香喷喷热乎乎的一碗卤煮火烧进肚了，味道老香了~
+                                    
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- 6 -->
+            <div class="swiper-slide animated rotateIn bg_user6">
+                <div class="user_info">
+                    <div class="user_avator text-center">
+                        <div>
+                            <img src="./img/user/6.png" alt="" width="150" height="150">
+                        </div>
+                        <h5 class="mt-4">o不列颠呆毛王o</h5>
+                    </div>
+                    <div class="row align-content-center justify-content-between" style="margin-top:6rem;">
+                        <div class="col-6">
+                            <div class="user_food">
+                                <img src="./img/user/6_6.png" alt="" width="740" height="543">
+                            </div>
+                        </div>
+                        <div class="col-6 mt-5">
+                            <p class="p-5 border border-info" style="min-width:880px;">
+                                    自己琢磨了一道“香料黄油烤鸡腿配蔬菜”。分享给你们!（嘿哈）
+                                    亮点在于把自己喜欢的香料加入黄油中搅拌均匀，然后把黄油塞进皮与肉之间进行烤制（注意不要把鸡皮弄破了）
+                                    我这里在黄油里加了黑胡椒、海盐、自制辣椒面、百里香、白葡萄酒、橄榄油、薄荷叶；
+                                    烤制温度上下火200度，中层正反面各13分钟后再放到上层两面各五分钟；
+                                    配菜就直接放在烤盘里撒上海盐黑胡椒和鸡腿一起烤就ok。
+                                    
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- 7 -->
+            <div class="swiper-slide animated rotateIn bg_user7">
+                <div class="user_info">
+                    <div class="user_avator text-center">
+                        <div>
+                            <img src="./img/user/7.jpg" alt="" width="150" height="150">
+                        </div>
+                        <h5 class="mt-4">我的马鸭</h5>
+                    </div>
+                    <div class="row align-content-center justify-content-between" style="margin-top:6rem;">
+                        <div class="col-6">
+                            <div class="user_food">
+                                <img src="./img/user/7_7.png" alt="" width="740" height="543">
+                            </div>
+                        </div>
+                        <div class="col-6 mt-5">
+                            <p class="p-5 border border-info" style="min-width:880px;">
+                                    救救孩子!双喜铁板烧!太太太好吃了吧!虽然排队一个多小时，但是好吃啊，便宜，量大，大家一定去了先叫号再点菜,不然像我一样，等了好久好久好久啊
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- 8 -->
+            <div class="swiper-slide animated rotateIn bg_user8">
+                <div class="user_info">
+                    <div class="user_avator text-center">
+                        <div>
+                            <img src="./img/user/8.jpg" alt="" width="150" height="150">
+                        </div>
+                        <h5 class="mt-4">Finalfantasy</h5>
+                    </div>
+                    <div class="row align-content-center justify-content-between" style="margin-top:6rem;">
+                        <div class="col-6">
+                            <div class="user_food">
+                                <img src="./img/user/8_8.png" alt="" width="740" height="543">
+                            </div>
+                        </div>
+                        <div class="col-6 mt-5">
+                            <p class="p-5 border border-info" style="min-width:880px;">
+                                    光谷一0八抹茶茶廊好吃不贵，良心安利。8块钱一个，买二送一，16元买了三个还挺划算的~原味抹茶红豆卡仕达的最好吃! !红豆沙和抹茶中和的刚刚好，不甜不腻~
+                                    他家的抹茶卡仕达不算很甜，后味能感受到苦味，还挺喜欢的~只是我一一个人吃了三个还是有点腻...
+                                    下次来试试饮品和冰淇淋,看起来不错的感觉~
+                                    。
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- 9 -->
+            <div class="swiper-slide animated rotateIn bg_user9">
+                <div class="user_info">
+                    <div class="user_avator text-center">
+                        <div>
+                            <img src="./img/user/9.jpg" alt="" width="150" height="150">
+                        </div>
+                        <h5 class="mt-4">小黄鸡永不为奴</h5>
+                    </div>
+                    <div class="row align-content-center justify-content-between" style="margin-top:6rem;">
+                        <div class="col-6">
+                            <div class="user_food">
+                                <img src="./img/user/9_9.png" alt="" width="740" height="543">
+                            </div>
+                        </div>
+                        <div class="col-6 mt-5">
+                            <p class="p-5 border border-info" style="min-width:880px;">
+                                    桌上的橘子  晴天的光影
+                                    每一点都恰到好处  刚刚好合心意
+                                    。
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- 10 -->
+            <div class="swiper-slide animated rotateIn bg_user10">
+                <div class="user_info">
+                    <div class="user_avator text-center">
+                        <div>
+                            <img src="./img/user/10.png" alt="" width="150" height="150">
+                        </div>
+                        <h5 class="mt-4">Anywei</h5>
+                    </div>
+                    <div class="row align-content-center justify-content-between" style="margin-top:6rem;">
+                        <div class="col-6">
+                            <div class="user_food">
+                                <img src="./img/user/10_10.png" alt="" width="740" height="543">
+                            </div>
+                        </div>
+                        <div class="col-6 mt-5">
+                            <p class="p-5 border border-info" style="min-width:880px;">
+                                    一个人泡在了coffee「set up」
+                                    出门喝的最后一杯咖啡
+                                    意外好喝
+                                    
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- 11 -->
+            <div class="swiper-slide animated rotateIn bg_user11">
+                <div class="user_info">
+                    <div class="user_avator text-center">
+                        <div>
+                            <img src="./img/user/11.png" alt="" width="150" height="150">
+                        </div>
+                        <h5 class="mt-4">宛宛在沉思</h5>
+                    </div>
+                    <div class="row align-content-center justify-content-between" style="margin-top:6rem;">
+                        <div class="col-6">
+                            <div class="user_food">
+                                <img src="./img/user/11_11.png" alt="" width="740" height="543">
+                            </div>
+                        </div>
+                        <div class="col-6 mt-5">
+                            <p class="p-5 border border-info" style="min-width:880px;">
+                                    「黑月亮COFFEE」
+                                    店里的布置挺有意思的，但这不是重点
+                                    重点是店里的手冲很赞，豆子很新鲜老板手很稳
+                                    老板说怕给我冲得味道重了，但是我就很喜欢焦苦的味道hhhh
+                                    即使一个人来也不会感到孤单。
+                                    
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- 12 -->
+            <div class="swiper-slide animated rotateIn bg_user12">
+                <div class="user_info">
+                    <div class="user_avator text-center">
+                        <div>
+                            <img src="./img/user/12.png" alt="" width="150" height="150">
+                        </div>
+                        <h5 class="mt-4">点击头像收获快乐</h5>
+                    </div>
+                    <div class="row align-content-center justify-content-between" style="margin-top:6rem;">
+                        <div class="col-6">
+                            <div class="user_food">
+                                <img src="./img/user/12_12.png" alt="" width="740" height="543">
+                            </div>
+                        </div>
+                        <div class="col-6 mt-5">
+                            <p class="p-5 border border-info" style="min-width:880px;">
+                                    自创西兰花圣诞树~<br>
+                                    1.材料：西兰花，胡萝卜，小番茄<br>
+                                    2.辅佐材料：盘子，竹签，剪刀，小装饰品（随便你有啥装品都可以随意搭配）<br>
+                                    3.步骤：西兰花洗干净沥干水分用剪刀剪成一朵一朵，分成大朵和小朵各一盘（备注大朵西兰花用于底部，小朵西兰花用在顶部），小番茄洗干净沥干待用，胡萝卜洗干净沥干，用刀头部切平直放在盘子上，用牙签固定好西兰花跟小番茄，最后把装饰品摆放好。<br>
+                                    来动手试试吧~
+                                    
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- 13 -->
+            <div class="swiper-slide animated rotateIn bg_user13">
+                <div class="user_info">
+                    <div class="user_avator text-center">
+                        <div>
+                            <img src="./img/user/13.jpg" alt="" width="150" height="150">
+                        </div>
+                        <h5 class="mt-4">铁罐儿呢</h5>
+                    </div>
+                    <div class="row align-content-center justify-content-between" style="margin-top:6rem;">
+                        <div class="col-6">
+                            <div class="user_food">
+                                <img src="./img/user/13_13.png" alt="" width="740" height="543">
+                            </div>
+                        </div>
+                        <div class="col-6 mt-5">
+                            <p class="p-5 border border-info" style="min-width:880px;">
+                                    份量咸淡刚刚好，是怀旧的味道。☞郑伯伯面馆
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- 14 -->
+            <div class="swiper-slide animated rotateIn bg_user14">
+                <div class="user_info">
+                    <div class="user_avator text-center">
+                        <div>
+                            <img src="./img/user/14.png" alt="" width="150" height="150">
+                        </div>
+                        <h5 class="mt-4">COPYCATMIAO</h5>
+                    </div>
+                    <div class="row align-content-center justify-content-between" style="margin-top:6rem;">
+                        <div class="col-6">
+                            <div class="user_food">
+                                <img src="./img/user/14_14.png" alt="" width="740" height="543">
+                            </div>
+                        </div>
+                        <div class="col-6 mt-5">
+                            <p class="p-5 border border-info" style="min-width:880px;">
+                                    20181220
+                                    咕咕韩式炸鸡（甜辣单人餐
+                                    推荐指数三星!
+                                    一定要滚烫滚烫才好吃啊
+                                    
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- 15 -->
+            <div class="swiper-slide animated rotateIn bg_user15">
+                <div class="user_info">
+                    <div class="user_avator text-center">
+                        <div>
+                            <img src="./img/user/15.png" alt="" width="150" height="150">
+                        </div>
+                        <h5 class="mt-4">唯怡milky</h5>
+                    </div>
+                    <div class="row align-content-center justify-content-between" style="margin-top:6rem;">
+                        <div class="col-6">
+                            <div class="user_food">
+                                <img src="./img/user/15_15.png" alt="" width="740" height="543">
+                            </div>
+                        </div>
+                        <div class="col-6 mt-5">
+                            <p class="p-5 border border-info" style="min-width:880px;">
+                                    晚上的司门口好像很热闹啊
+                                    无意中看到一家宫廷牛肉酥饼很多人排队！
+                                    
+                                    四块钱一个，味道还行！
+                                    外皮很酥脆，牛肉加大葱真的很香！
+                                    但是我觉得肉太少了[跪了]味道偏淡，
+                                    面皮虽然很酥，但是面饼过厚，中间的就很软了！
+                                    路过可以买来吃一吃，特地去打卡的话就不用啦！
+                                    
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+    <script src="js/swiper.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            direction: 'vertical',
+            slidesPerView: 1,
+            spaceBetween: 30,
+            mousewheel: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    </script>
+</body>
+
+</html>

@@ -162,11 +162,10 @@
     word-wrap: break-word;
     font-size:14px;
 }
-.food_intro_img{
-    height:300px;
-    background: url("../img/img/img14.jpeg") no-repeat;
-    background-size:100% ; 
-}
+.food_intro_img img{
+    height:500px;
+    width: 1024px;
+    }
 .my_rounded{
     border-radius: 1rem !important;
 }
@@ -318,3 +317,75 @@ button {
 .shop-box-classify p{
     line-height: 10px;
 }
+
+
+.user_info {
+
+}
+.user_avator img{
+   overflow: hidden; 
+   border-radius: 50%;
+   width:150px;
+   height:150px;
+}
+.bg_user1 {
+    background: #ffaeff !important;
+    opacity: 0.9;
+}
+.bg_user2 {
+    background: #ffaee7 !important;
+    opacity: 0.9;
+}
+.bg_user3 {
+    background: #e9aeff !important;
+    opacity: 0.9;
+}
+.bg_user4 {
+    background: #aeb9ff !important;
+    opacity: 0.9;
+}
+.bg_user5 {
+    background: #5fdbd1 !important;
+    opacity: 0.9;
+}
+.bg_user6 {
+    background: #d9f9cc !important;
+    opacity: 0.9;
+}
+.bg_user7 {
+    background: #aed6ff !important;
+    opacity: 0.9;
+}
+.bg_user8 {
+    background: #aef8ff !important;
+    opacity: 0.9;
+}
+.bg_user9 {
+    background: #aeffe7 !important;
+    opacity: 0.9;
+}
+.bg_user10 {
+    background: #aeffbf !important;
+    opacity: 0.9;
+}
+.bg_user11 {
+    background: #c7ffae !important;
+    opacity: 0.9;
+}
+.bg_user12 {
+    background: #ebffae !important;
+    opacity: 0.9;
+}
+.bg_user13 {
+    background: #fffeae !important;
+    opacity: 0.9;
+}
+.bg_user14 {
+    background: #ffd22e !important;
+    opacity: 0.9;
+}
+.bg_user15 {
+    background: #b7f0f0 !important;
+    opacity: 0.9;
+}
+
