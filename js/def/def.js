@@ -27,10 +27,12 @@ $(function(){
     });
    //返回顶部
    $("#goBack").click(function(e){
-       e.preventDefault();
+    //    e.preventDefault();
        $('html').animate({scrollTop:0},500)
    })
-
+   $(".goBack_sub").click(function(){
+      $('html').animate({scrollTop:0},500)
+   })
     $(".enter").on("click",e=>{
         e.preventDefault();
         $("html").animate({scrollTop:1200},500);
@@ -50,14 +52,27 @@ $(function(){
         }
     });
     // 处理商店收藏图标
-    $(".shop-box").click(function(e){
+    // $(".shop-box").click(function(e){
+    //     var item = e.target;
+    //    if($(item).is(".show")){
+    //        $(item).attr("src","img/img/collect2.png").removeClass("show");
+    //    }else{
+    //        $(item).attr("src","img/img/collect1.png").addClass("show");
+    //    }
+    // });
+    $(".shop_collect_sub_sub").click(function(e){
+        e.preventDefault();
+        $('html').animate({scrollTop:1500},500)
+    })
+    $(".show").click(function(e){
         var item = e.target;
        if($(item).is(".show")){
            $(item).attr("src","img/img/collect2.png").removeClass("show");
        }else{
            $(item).attr("src","img/img/collect1.png").addClass("show");
        }
-    });
+    })
+    //
     // 处理个人中心删除
     $(".yes").click(function(e){
         let item = e.target;
