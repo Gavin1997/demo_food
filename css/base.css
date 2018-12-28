@@ -36,67 +36,9 @@
     background: rgba(39, 39, 39,0.3);
 }
 
-/* 背景颜色图 */
-.background_index {
-    background: #FEE4C3;
-    height:100%;
-    width:500px;
-    z-index: -10;
-    position: fixed;
-    right:0px;
-    top:0;
-}
-/* 地图颜色图 */
-.background_map {
-    background: #D3EFFA;
-    height:100%;
-    width:500px;
-    z-index: -10;
-    position: fixed;
-    right:0px;
-    top:0;
-}
-/* 商店颜色图 */
-.background_shop {
-    background: #E3E1F7;
-    height:100%;
-    width:500px;
-    z-index: -10;
-    position: fixed;
-    right:0px;
-    top:0;
-}
-/* 食谱颜色图 */
-.background_food {
-    background: #d9f9cc;
-    height:90%;
-    width:500px;
-    z-index: -1;
-    position: fixed;
-    right:0px;
-    top:0;
-}
-.shop-collect img{
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    left: 30%;
-    top: calc(50% - 20px);
-    cursor: pointer;
-}
 
-/* 发现颜色图 */
-.background_find {
-    background: #ffbbbb;
-    height:100%;
-    width:500px;
-    z-index: -10;
-    position: fixed;
-    right:0px;
-    top:0;
-}
 /* 个人中心 */
-.background_person {
+/* .background_person {
     background: #94fff4;
     height:100%;
     width:500px;
@@ -105,7 +47,7 @@
     right:0px;
     top:0;
    
-}
+} */
 /* 鼠标hover 下拉菜单 */
 .my_dropdown_food li:hover{
     background: #666 !important;
@@ -117,8 +59,8 @@
     border:1px solid transparent;
 }
 .food_menu_active {
-    border:1px solid red;
-    background: red;
+    border:1px solid #ffcc66;
+    background: #ffcc66;
     color:#fff;
 }
 /* 食谱图片 */
@@ -177,7 +119,7 @@
     display: inline-block;
 }
 .recommend_wrap{
-    margin:8rem !important;
+    /* margin:4rem !important; */
 }
 /* 商店 */
 .shop-line {
@@ -266,6 +208,12 @@ button {
     top: calc(50% - 20px);
     cursor: pointer;
 }
+.food_box{
+    background: #fff;
+}
+.food_intro {
+    background: #fff;
+}
 /* 个人 */
 
 .hr_line{
@@ -338,10 +286,10 @@ button {
 .user_avator img{
    overflow: hidden; 
    border-radius: 50%;
-   width:150px;
-   height:150px;
+   width:100px;
+   height:100px;
 }
-.bg_user1 {
+/* .bg_user1 {
     background: #ffaeff !important;
     opacity: 0.9;
 }
@@ -400,7 +348,7 @@ button {
 .bg_user15 {
     background: #b7f0f0 !important;
     opacity: 0.9;
-}
+} */
 .shop-box-classify .shop-text img{
     width:50px;
     height:50px;
